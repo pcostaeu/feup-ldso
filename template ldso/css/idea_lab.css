@@ -25,6 +25,16 @@ h6 {
     letter-spacing: 1px;
 }
 
+#votes {
+    width: 15%;
+}
+#upvote {
+    color: green;
+}
+#downvote {
+    color: red;
+}
+
 p {
     font-size: 1.25em;
     line-height: 1.6;
