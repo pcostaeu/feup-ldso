@@ -21,8 +21,8 @@
     <script src="js/jquery.js"></script>
     
     <!--Contador -->
-    <script src="js/counter/jquery.counter.js"></script>
-    <link href="css/counter/jquery.counter-analog.css" rel="stylesheet" type="text/css">
+    <script src="js/counter/counter.js"></script>
+    <link href="css/counter/counter.css" rel="stylesheet" type="text/css">
     
     <!-- Fontes -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -104,11 +104,6 @@
                     </h2>
                     <h1 class="brand-name">More Sustainable Ideas</h1>
                     <hr class="tagline-divider">
-                    <h2>
-                        <small>By
-                            <strong>Start Bootstrap</strong>
-                        </small>
-                    </h2>
                 </div>
             </div>
         </div>
@@ -117,40 +112,42 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
+                    <h2 class="intro-text text-center">FEUP e a
+                        <strong>Sustentabilidade</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
                     <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>As instituições de ensino superior são responsáveis pela formação da maioria dos profissionais que assumem cargos relevantes na sociedade, devendo, por isso, assumir um papel preponderante no Desenvolvimento Sustentável. Além disso, devem ser elas próprias modelos de sustentabilidade.</p>
+
+					<p>A FEUP encontra-se fortemente empenhada em promover a sustentabilidade e comportamentos e práticas mais sustentáveis. Prova disso, é o <a href="web_base.gera_pagina?p_pagina=31509" target="_blank">plano estratégico 2011-2015</a> que contém secções dedicadas às políticas ambientais, sociais e económicas. O seu empenho em tornar-se mais sustentável reflete-se ainda no facto de ser membro da reconhecida associação internacional <a href="web_gessi_docs.download_file?p_name=F2030586683/eauc_certificate.pdf" target="_blank"><em>EAUC – Environmental Association for Universities and Colleges</em></a> e na publicação do relatório de sustentabilidade desde 2006. O objetivo principal destes relatórios é proporcionar à comunidade FEUP e à sociedade em geral uma visão do seu desempenho nas diversas vertentes da sustentabilidade (social, económica e ambiental), contribuindo também para a sensibilização de todos quantos compõem a instituição.</p><br>
+					<img class="img-responsive img-border" src="https://sigarra.up.pt/feup/pt/web_gessi_docs.download_file?p_name=F-1840222254/eauc_certificate.jpg" alt=""><br>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        
+		<div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Beautiful boxes
-                        <strong>to showcase your content</strong>
-                    </h2>
-                    <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
-            </div>
-        </div>
-<div class="row">
-            <div class="box">
-                <div class="col-lg-12">
+                	<hr>
+		                <h2 class="intro-text text-center">Consumos desde o início de 2015</h2>
+		            <hr>
                     <div class="row">
                         <div class="col-xs-4">
                             <h2 class="intro-text text-center">
-      <strong>Electricidade</strong>
-      </h2>
+      							<strong>Electricidade</strong>
+      						</h2>
+                            <div class="text-center">
+                                <span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
+                                <script>
+                                    $('.counter').counter({});
+                                </script>
+                            </div>
+                        	</div>
+                        	<div class="col-xs-4">
+                            <h2 class="intro-text text-center">
+							      <strong>Água</strong>
+							</h2>
                             <div class="text-center">
                                 <span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
                                 <script>
@@ -160,19 +157,8 @@
                         </div>
                         <div class="col-xs-4">
                             <h2 class="intro-text text-center">
-      <strong>Água</strong>
-      </h2>
-                            <div class="text-center">
-                                <span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
-                                <script>
-                                    $('.counter').counter({});
-                                </script>
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <h2 class="intro-text text-center">
-      <strong>Papel</strong>
-      </h2>
+						    	<strong>Papel</strong>
+						    </h2>
                             <div class="text-center">
                                 <span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
                                 <script>
@@ -191,7 +177,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; LDSO-5D</p>
+                    <h4>Copyright &copy; LDSO-5D</h4>
                 </div>
             </div>
         </div>
@@ -208,6 +194,11 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+    </script>
+    <script>
+		$('#papel').load('https://sigarra.up.pt/feup/pt/WEB_BASE.GERA_PAGINA?P_pagina=32313', function() {
+    		alert('loaded');
+		});
     </script>
 
 </body>
