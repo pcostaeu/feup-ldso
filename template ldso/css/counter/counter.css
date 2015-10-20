@@ -5,8 +5,8 @@
 .counter-analog span.separator {
     display: inline-block;
     height: 40px;
-    line-height: 40px;
-    width: 10px;
+    line-height: 30px;
+    width: 3px;
     vertical-align: middle;
     text-align: center;
     font-weight: bold;
