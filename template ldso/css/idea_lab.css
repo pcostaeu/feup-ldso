@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Business Casual Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     background: url('../img/bg.jpg') no-repeat center center fixed;
@@ -33,6 +27,26 @@ h6 {
 }
 #downvote {
     color: red;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.6);
+}
+
+.carousel-indicators {
+  bottom: -10px;
+}
+
+a.action.language {
+
+  float:right;
+  color: white;
+  font-weight: bold;
+
+}
+img.action.language{
+    width:34px;
+    height:20px;
 }
 
 table
