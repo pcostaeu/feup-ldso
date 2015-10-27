@@ -3,9 +3,12 @@
  *
  * Copyright (c) 2012 Sophilabs <hi@sophilabs.com>
  * MIT License
+ *
+ * From: http://sophilabs.github.io/jquery-counter/
+ * Modificado para atender aos nossos requisitos
  */
- 
- !(function (context, definition) {
+
+!(function (context, definition) {
  	if (typeof define == 'function' && typeof define.amd  == 'object') define(['jquery'], definition);
  	else definition(context['$']);
  }(this, function ($) {
@@ -26,7 +29,28 @@
  		var i = data.parts.length - 1;
  		while(i >= 0) {
  			var part = data.parts[i];
- 			part.value += data.down ? -1 : 1;
+
+            //ALTERADO AQUI
+            var newValues = new Object();
+            var dif;
+            newValues = counters();
+
+            if(data.clockNum == 0) {
+                dif = Math.round(newValues[0] - values[0]);
+                values[0] = newValues[0];
+            }
+            else if(data.clockNum ==1) {
+                dif = Math.round(newValues[1] - values[1]);
+                values[1] = newValues[1];
+            }
+            else {
+                dif = Math.round(newValues[2] - values[2]);
+                values[2] = newValues[2];
+            }
+
+ 			part.value += dif;
+            //ATE AQUI
+
  			if (data.down && part.value < 0) {
  				part.value = part.limit;
  			} else if (!data.down && part.value > part.limit) {
@@ -152,6 +176,11 @@
     			data.down = (options.direction || e.attr('data-direction') || 'down') == 'down';
     			data.parts = [];
     			var initial = split(options.initial || e.text(), /([^0-9]+)/);
+                
+                //ADICIONADO ISTO
+                data.clockNum = split(options.clockNum || e.text(), /([^0-9]+)/);
+                //ATE AQUI
+
                 //WARN: Use attr() no data()
                 var format = split(options.format || e.attr('data-format') || "23:59:59", /([^0-9]+)/);
                 var stop =  options.stop || e.attr('data-stop');

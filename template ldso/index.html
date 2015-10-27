@@ -18,10 +18,10 @@
 	<link href="css/idea_lab.css" rel="stylesheet">
 	<link href="css/crop_index.css" rel="stylesheet">
 
+	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
 
 	<!--Contador -->
-	<script src="js/counter/counter.js"></script>
 	<link href="css/counter/counter.css" rel="stylesheet" type="text/css">
 
 	<!-- Fontes -->
@@ -31,9 +31,9 @@
 
 <body>
 
-	<a class="action language" href="index_en.html" title="English site"><img class="action language" src="http://automotiverevista.com/wp-content/uploads/2015/01/9T4ezAALc.png">English</a>
-
-	<div class="brand">Mais IS</div>
+	<div class="brand">Mais IS
+		<a class="action language" href="index_en.html" title="English site"><img class="action language" src="http://automotiverevista.com/wp-content/uploads/2015/01/9T4ezAALc.png"></a>
+	</div>
 
 	<!-- Navigation -->
 	<nav id="nav" class="navbar navbar-default navbar-static" role="navigation">
@@ -191,35 +191,26 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-4">
 							<h2 class="intro-text text-center">
-								<strong>Electricidade</strong>
+								<strong>Electricidade (kWh)</strong>
 							</h2>
 							<div class="text-center">
-								<span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
-								<script>
-									$('.counter').counter({});
-								</script>
+								<span class="counter1 counter-analog" data-direction="up" data-format="99999999">0</span>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4">
 							<h2 class="intro-text text-center">
-								<strong>Água</strong>
+								<strong>Água (M<sup>3</sup>)</strong>
 							</h2>
 							<div class="text-center">
-								<span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
-								<script>
-									$('.counter').counter({});
-								</script>
+								<span class="counter2 counter-analog" data-direction="up" data-format="99999999">0</span>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4">
 							<h2 class="intro-text text-center">
-								<strong>Papel</strong>
+								<strong>Papel (páginas)</strong>
 							</h2>
 							<div class="text-center">
-								<span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
-								<script>
-									$('.counter').counter({});
-								</script>
+								<span class="counter3 counter-analog" data-direction="up" data-format="99999999">0</span>
 							</div>
 						</div>
 					</div>
@@ -239,24 +230,18 @@
 		</div>
 	</footer>
 
-	<!-- jQuery -->
-	<script src="js/idea_lab.js"></script>
-
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/counter.js"></script>
+	<script src="js/idea_lab.js"></script>
+
 
 	<!-- Script to Activate the Carousel -->
 	<script>
 		$('.carousel').carousel({
-        interval: 5000 //changes the speed
+        interval: 4000 //changes the speed
     })
 	</script>
-	<script>
-		$('#papel').load('https://sigarra.up.pt/feup/pt/WEB_BASE.GERA_PAGINA?P_pagina=32313', function() {
-			alert('loaded');
-		});
-	</script>
-
 </body>
 
 </html>
