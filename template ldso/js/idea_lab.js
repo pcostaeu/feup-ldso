@@ -1,18 +1,20 @@
 var values;
 
-$(document).ready(function() {
-	values = counters();
-
-	$('.counter1').counter({initial: values[0], clockNum: 0});
-	$('.counter2').counter({initial: values[1], clockNum: 1});
-	$('.counter3').counter({initial: values[2], clockNum: 2});
-	
+$(document).ready(function() {	
 	$('#nav').affix({
 		offset: {
 			top: 120
 		}
 	});         
 });
+
+function startCounters () {
+	values = counters();
+
+	$('.counter1').counter({initial: values[0], clockNum: 0});
+	$('.counter2').counter({initial: values[1], clockNum: 1});
+	$('.counter3').counter({initial: values[2], clockNum: 2});
+}
 
 function counters() {
 	var datainicio = new Date(2015, 0, 1, 0, 0, 0, 0);
