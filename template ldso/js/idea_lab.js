@@ -1,11 +1,24 @@
 var values;
 
 $(document).ready(function() {	
-	$('#nav').affix({
-		offset: {
-			top: $('#nav').height()
+        $("#nav").affix({
+	offset: {
+			top: $("#nav").position().top
 		}
-	});              
+});
+var height = $("#nav").position().top;
+// add padding element above is affixed
+$("#nav").on("affix.bs.affix", function() {
+  //$("#teste").addClass("padded");
+    var myElement = document.querySelector("#ideas");
+    myElement.style.paddingTop = height + "px";
+});
+
+// and remove again when unaffixed
+$("#nav").on("affix-top.bs.affix", function() {
+  var myElement = document.querySelector("#ideas");
+  myElement.style.paddingTop ="0px";
+});
 });
 
 function startCounters () {
@@ -40,7 +53,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          scrollTop: ($("#submitIdea").position().top - 200)
         }, 1000);
         return false;
       }
