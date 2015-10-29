@@ -2,3 +2,12 @@
     position: relative;
     padding-top: 1%;
 }
+.botaolida {
+     position: relative;
+   padding-top:1.5%;
+      right:0;
+}
+
+#email{
+   text-align:right;
+}
