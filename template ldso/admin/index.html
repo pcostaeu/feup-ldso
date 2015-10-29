@@ -3,52 +3,87 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="FEUP">
-	<meta name="author" content="LDSO-5D">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FEUP">
+    <meta name="author" content="LDSO-5D">
 
-	<title>Login - Mais IS</title>
+    <title>Login - Mais IS</title>
 
-	<!-- Bootstrap -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- CSS -->
-	<link href="../css/idea_lab.css" rel="stylesheet">
-	<link href="../css/admin.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="../css/idea_lab.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
 
-	<!-- Fontes -->
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Fontes -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-	<div class="page">
+    <div class="page">
 
-		<div class="brand">Mais IS</div>
+        <div class="brand">Mais IS</div>
 
+        <!--login modal-->
+        <div class="container" id="login">
 
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div id="loginModal" class="show" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h1 class="text-center">Login</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form col-md-12 center-block">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control input-lg" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+                                            <span><a href="#">Need help?</a></span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-md-12">
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	</div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4>Copyright &copy; LDSO-5D</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h4>Copyright &copy; LDSO-5D</h4>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
 
-	<!-- jQuery -->
-	<script src="../js/jquery.js"></script>
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/idea_lab.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/idea_lab.js"></script>
 
 </body>
 
