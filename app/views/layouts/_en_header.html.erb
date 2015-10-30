@@ -1,0 +1,46 @@
+<body>
+
+	<div class="page">
+
+		<div class="brand">More IS
+			<%= link_to root_path do %>
+  			<%= image_tag "http://www.autorent.pt/pt/_borders/pt_flag.gif", class: "action language" %>
+  			<% end %>
+		</div>
+
+		<!-- Navigation -->
+		<nav id="nav" class="navbar navbar-default navbar-static" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+					<%= link_to "More IS", english_path, class: "navbar-brand" %>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+				            <%= link_to "Home", english_path, class: "a" %>
+						</li>
+						<li>
+						<!--	<%= link_to "Submit Idea", english_path(anchor: "submitIdea"), class: "a" %> -->
+						<%= link_to "Submit Idea", english_path(@welcome, anchor: "submitIdea"), id: "click" %>
+						</li>
+						<li>
+								  <%= link_to "Ideas", ideas_english_path, class: "a" %>
+						</li>
+						<li>
+							<%= link_to "Contacts", contacts_english_path, class: "a" %>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>

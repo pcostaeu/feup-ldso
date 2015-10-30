@@ -9,8 +9,12 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+// app/assets/javascripts/application.js
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require idea_lab.js
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .

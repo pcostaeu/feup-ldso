@@ -1,0 +1,45 @@
+<body>
+
+	<div class="page">
+
+		<div class="brand">Mais IS
+			<%= link_to english_path do %>
+			<%= image_tag "http://automotiverevista.com/wp-content/uploads/2015/01/9T4ezAALc.png", class: "action language" %>
+			<% end %>
+		</div>
+
+		<!-- Navigation -->
+		<nav id="nav" class="navbar navbar-default navbar-static" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+					<%= link_to "Mais IS", root_path, class: "navbar-brand" %>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+				            <%= link_to "Início", root_path, class: "a" %>
+						</li>
+						<li>
+							<%= link_to "Submeter Ideia", root_path(@welcome, anchor: "submitIdea"), id: "click" %>
+						</li>
+						<li>
+								<%= link_to "Ideias", ideas_path, class: "a" %>
+						</li>
+						<li>
+							<%= link_to "Contactos", contacts_path, class: "a" %>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
