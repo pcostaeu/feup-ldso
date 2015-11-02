@@ -14,7 +14,6 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require idea_lab.js
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .

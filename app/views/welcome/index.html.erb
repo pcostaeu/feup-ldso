@@ -49,7 +49,7 @@
 						<h2 class="brand-before">
 							<small>Bem vindo ao</small>
 						</h2>
-						<h1 class="brand-name">Mais Ideias Sustentáveis</h1>
+						<h1 class="brand-name">Mais IS</h1>
 						<hr class="tagline-divider">
 					</div>
 				</div>
@@ -72,48 +72,7 @@
 				</div>
 			</div>
 
-			<div class="row" id="submitIdea">
-				<div class="box">
-					<div class="col-lg-12">
-						<hr>
-						<h2 class="intro-text text-center">Tens uma
-							<strong>ideia?</strong>
-						</h2>
-						<hr>
-						<p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tens alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
-						<form role="form">
-							<div class="row">
-								<div class="form-group col-lg-6">
-									<label>Nome</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="form-group col-lg-6">
-									<label>E-mail</label>
-									<input type="email" class="form-control">
-								</div>
-								<div class="clearfix"></div>
-								<div class="form-group col-lg-12">
-									<label>Título</label>
-									<input class="form-control" rows="6"></input>
-								</div>
-								<div class="form-group col-lg-12">
-									<label>Ideia</label>
-									<textarea style="resize: vertical;" type="text" class="form-control" rows="6"></textarea>
-								</div>
-								<div class="form-group col-lg-12">
-									<label>Escolha uma imagem que identifique o problema: </label>
-									<input type="hidden" name="save" value="contact">
-									<button type="submit" class="btn btn-default">Escolher imagem</button>
-								</div>
-								<div class="form-group col-lg-12">
-									<input type="hidden" name="save" value="contact">
-									<button type="submit" class="btn btn-default">Submeter</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+			<%= render "ideas/new" %>
 
 			<div class="row">
 				<div class="box">
