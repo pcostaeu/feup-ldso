@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029123101) do
+ActiveRecord::Schema.define(version: 20151101003448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,14 @@ ActiveRecord::Schema.define(version: 20151029123101) do
     t.text     "text"
     t.string   "image"
     t.integer  "upvotes"
-    t.integer  "downvotes"
+    t.integer  "downvotes",  default: 0
     t.integer  "topic_id"
     t.boolean  "approved"
     t.date     "date"
     t.string   "author"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "email"
   end
 
 end
