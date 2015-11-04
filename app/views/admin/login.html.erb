@@ -1,0 +1,40 @@
+    <div class="brand">Mais IS</div>
+
+        <nav id="nav" class="navbar navbar-default navbar-static" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Mais IS</a>
+            </div>
+        </nav>
+
+        <div class="container" id="login">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div id="loginModal" class="show" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" id="modal-header">
+                                    <h1 class="text-center">Login</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <%= form_for :admin, url: approve_path do |f| %>
+                                    <div class="form col-md-12 center-block">
+                                        <div class="form-group">
+                                            <%= f.text_field :email, :class => 'form-control input-lg', :placeholder => 'Email' %>
+                                         </div>
+                                        <div class="form-group">
+                                            <%= f.password_field :password, :class => 'form-control input-lg', :placeholder => 'Password' %>
+                                        </div>
+                                        <div class="form-group">
+                                            <%= f.submit "Entrar", :class => 'btn btn-primary btn-lg btn-block' %>
+                                        </div>
+                                    </div>
+                                    <% end %>
+                                </div>
+                                <div class="modal-footer" id="modal-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

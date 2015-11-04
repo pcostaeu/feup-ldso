@@ -1,0 +1,25 @@
+.botoes {
+    position: relative;
+    padding-top: 1%;
+}
+.botaolida {
+     position: relative;
+   padding-top:1.5%;
+      right:0;
+}
+
+#email{
+   text-align:right;
+}
+
+#modal-header {
+  border-bottom: 0px;
+}
+
+#modal-footer {
+  border-top: 0px;
+}
+
+#login {
+	margin-top: 7%;
+}
