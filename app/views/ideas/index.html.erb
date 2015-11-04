@@ -16,7 +16,9 @@
 							<small>October 15, 2015</small>
 						</h2>
 						<div class="col-xs-12 col-sm-12 col-md-4">
-							<img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt="">
+                            <% if idea.picture? %>
+                                <img class="img-responsive img-border img-full" src=<%=idea.picture.url%> alt="">
+                            <% end %>
 						</div>
 						<p><%= idea.text %></p>
 					</div>
