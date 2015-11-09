@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'admin/login'
-
-  get 'admin/approve'
 
   get 'welcome/index'
 
@@ -9,17 +6,18 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   resources :ideas
   resources :contacts
+  resources :month_ideas
+  resources :approve_ideas
+  resources :received_contacts
+
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  #page in english
   get '/en' => 'welcome#index_en', as: 'english'
   get '/ideas_en' => 'ideas#index_en', as: 'ideas_english'
   get '/contacts_en' => 'contacts#index_en', as: 'contacts_english'
   get '/admin' => 'admin#login', as: 'login'
-  get '/approve' => 'admin#approve', as: 'approve'
-  get '/contactsReceived' => 'admin#contactsReceived', as: 'contactsReceived'
-  get '/monthIdea' => 'admin#monthIdea', as: 'monthIdea'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

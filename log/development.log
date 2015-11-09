@@ -1,1 +1,1930 @@
 ﻿
+
+Started GET "/" for ::1 at 2015-11-09 16:44:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_pt_header.html.erb (3.0ms)
+  Rendered ideas/_new.html.erb (70.5ms)
+  Rendered welcome/index.html.erb within layouts/application (99.1ms)
+  Rendered layouts/_header.html.erb (17803.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17981ms (Views: 17953.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:45:17 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:45:17 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:45:17 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:45:18 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:45:18 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:45:18 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 16:45:18 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-09 16:45:18 +0000
+
+
+Started GET "/approveIdeas" for ::1 at 2015-11-09 16:45:26 +0000
+
+ActionController::RoutingError (No route matches [GET] "/approveIdeas"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.6ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.5ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:45:43 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (10.5ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `approve_path' for #<#<Class:0x9d19388>:0x9d18c80>):
+    17:     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    18:       <ul class="nav navbar-nav">
+    19:         <li>
+    20:           <%= link_to "Menu Aprovação", approve_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", monthIdea_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:20:in `_app_views_layouts__admin_header_html_erb__416490655_82401252'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb___629034846_82386168'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.9ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.4ms)
+
+
+Started GET "/login" for ::1 at 2015-11-09 16:46:09 +0000
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.2ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.6ms)
+
+
+Started GET "/admin" for ::1 at 2015-11-09 16:46:13 +0000
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `approve_path' for #<#<Class:0x658eb88>:0x658c290>):
+    17:               <h1 class="text-center">Login</h1>
+    18:             </div>
+    19:             <div class="modal-body">
+    20:               <%= form_for :admin, url: approve_path do |f| %>
+    21:               <div class="form col-md-12 center-block">
+    22:                 <div class="form-group">
+    23:                   <%= f.text_field :email, :class => 'form-control input-lg', :placeholder => 'Email' %>
+  app/views/admin/login.html.erb:20:in `_app_views_admin_login_html_erb___585346270_53267880'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.8ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:46:41 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (9.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `approve_path' for #<#<Class:0x9d19388>:0x9053580>):
+    17:     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    18:       <ul class="nav navbar-nav">
+    19:         <li>
+    20:           <%= link_to "Menu Aprovação", approve_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", monthIdea_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:20:in `_app_views_layouts__admin_header_html_erb__416490655_82401252'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb___629034846_82386168'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.1ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.5ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:47:33 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (3.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"month_idea"} missing required keys: [:id]):
+    20:           <%= link_to "Menu Aprovação", approve_ideas_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", month_idea_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:23:in `_app_views_layouts__admin_header_html_erb__416490655_78926808'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb___629034846_82386168'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.8ms)
+
+
+Started GET "/manel" for ::1 at 2015-11-09 16:51:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/manel"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.1ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.3ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.8ms)
+
+
+Started GET "/aprove_ideas" for ::1 at 2015-11-09 16:53:02 +0000
+
+ActionController::RoutingError (No route matches [GET] "/aprove_ideas"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.9ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.1ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:53:07 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (3.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"month_idea"} missing required keys: [:id]):
+    20:           <%= link_to "Menu Aprovação", approve_ideas_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", month_idea_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:23:in `_app_views_layouts__admin_header_html_erb__166652816_42784356'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb__109908845_42974544'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:27 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (5.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"contacts_received"} missing required keys: [:id]):
+    21:         </li>
+    22:       
+    23:         <li>
+    24:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+    25:         </li>
+    26:       </ul>
+    27:     </div>
+  app/views/layouts/_admin_header.html.erb:24:in `_app_views_layouts__admin_header_html_erb__166652816_52937256'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb__109908845_42974544'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.5ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:35 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (939.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 952ms (Views: 951.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 16:54:36 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:54:36 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 16:54:36 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 16:54:36 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 16:54:37 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:43 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.5ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (428.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 438ms (Views: 438.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:44 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (463.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 473ms (Views: 473.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:44 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (378.2ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Permission denied @ utime_failed - D:/OneDrive/Documentos/Faculdade/Projetos/LDSO-5D/tmp/cache/assets/development/sprockets/v3.0/AfepOwLwj4p22LhTn00lrv24pwsv4eiuRVGZfJLuWvw.cache):
+    12: 	<title>Mais IS</title>
+    13: 
+    14: 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    15: 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    16: 			<%= csrf_meta_tags %>
+    17: 
+    18: 				<!-- Fontes -->
+  app/views/layouts/_header.html.erb:15:in `_app_views_layouts__header_html_erb___934036722_77725836'
+  app/views/layouts/application.html.erb:1:in `_app_views_layouts_application_html_erb___858070205_42967932'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.1ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:45 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (898.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 911ms (Views: 909.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 16:54:46 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:54:48 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (454.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 464ms (Views: 462.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:55:22 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (3.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"month_idea"} missing required keys: [:id]):
+    20:           <%= link_to "Menu Aprovação", approve_ideas_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", month_idea_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:23:in `_app_views_layouts__admin_header_html_erb__166652816_77141952'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb__109908845_42974544'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.8ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 16:57:46 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (469.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 483ms (Views: 481.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 16:57:46 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 16:57:47 +0000
+
+
+Started GET "/" for ::1 at 2015-11-09 16:58:48 +0000
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  Rendered ideas/_new.html.erb (21.0ms)
+  Rendered welcome/index.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_header.html.erb (463.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 499ms (Views: 499.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 16:58:49 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-09 16:58:49 +0000
+
+
+Started GET "/month_idea" for ::1 at 2015-11-09 16:59:54 +0000
+Processing by MonthIdeaController#index as HTML
+  Rendered layouts/_admin_header.html.erb (2.0ms)
+  Rendered month_idea/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"month_idea"} missing required keys: [:id]):
+    20:           <%= link_to "Menu Aprovação", approve_ideas_path, class: "a" %>
+    21:         </li>
+    22:         <li>
+    23:           <%= link_to "Ideia do Mês", month_idea_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+  app/views/layouts/_admin_header.html.erb:23:in `_app_views_layouts__admin_header_html_erb__166652816_83318520'
+  app/views/month_idea/index.html.erb:1:in `_app_views_month_idea_index_html_erb__508635179_83474004'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.0ms)
+
+
+Started GET "/month_idea" for ::1 at 2015-11-09 17:00:30 +0000
+Processing by MonthIdeaController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered month_idea/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (464.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 478ms (Views: 476.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 17:00:30 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 17:00:31 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 17:00:34 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (456.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 469ms (Views: 468.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 19:08:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.6ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (199.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMonthIdeas (20151109190716)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (27.0ms)[0m  [1mCREATE TABLE "month_ideas" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151109190716"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contacts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ideas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'month_ideas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-11-09 19:10:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  Rendered ideas/_new.html.erb (89.1ms)
+  Rendered welcome/index.html.erb within layouts/application (103.1ms)
+  Rendered layouts/_header.html.erb (943.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1091ms (Views: 1067.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 19:10:06 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-09 19:10:07 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:10:12 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (5.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"contacts_received"} missing required keys: [:id]):
+    23:           <%= link_to "Ideia do Mês", month_ideas_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+    27:         </li>
+    28:       </ul>
+    29:     </div>
+  app/views/layouts/_admin_header.html.erb:26:in `_app_views_layouts__admin_header_html_erb__795386629_77122152'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb___182308658_77105832'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.6ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:10:27 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (446.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 465ms (Views: 464.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/contacts_received.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 19:10:27 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/contacts_received.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 19:10:28 +0000
+
+
+Started GET "/month_ideas" for ::1 at 2015-11-09 19:10:30 +0000
+Processing by MonthIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered month_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (373.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 385ms (Views: 384.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:10:31 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (406.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 415ms (Views: 415.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/month_ideas" for ::1 at 2015-11-09 19:10:33 +0000
+Processing by MonthIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered month_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (402.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 411.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:10:34 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.5ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (405.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 415ms (Views: 414.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:13:09 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (13.5ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `contacts_received_path' for #<#<Class:0x8941f80>:0x8941908>):
+    23:           <%= link_to "Ideia do Mês", month_ideas_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", contacts_received_path, class: "a" %>
+    27:         </li>
+    28:       </ul>
+    29:     </div>
+  app/views/layouts/_admin_header.html.erb:26:in `_app_views_layouts__admin_header_html_erb__795386629_71947080'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb___182308658_77105832'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.3ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (68.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.1ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:17:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (22.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `received_contacts_path' for #<#<Class:0x63982c8>:0x63839e8>):
+    23:           <%= link_to "Ideia do Mês", month_ideas_path, class: "a" %>
+    24:         </li>
+    25:         <li>
+    26:           <%= link_to "Contactos Recebidos", received_contacts_path, class: "a" %>
+    27:         </li>
+    28:       </ul>
+    29:     </div>
+  app/views/layouts/_admin_header.html.erb:26:in `_app_views_layouts__admin_header_html_erb___807094081_51667728'
+  app/views/approve_ideas/index.html.erb:1:in `_app_views_approve_ideas_index_html_erb__966056462_52073424'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.4ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.1ms)
+
+
+Started GET "/received_contatcts" for ::1 at 2015-11-09 19:18:15 +0000
+
+ActionController::RoutingError (No route matches [GET] "/received_contatcts"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (36.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (76.1ms)
+
+
+Started GET "/received_contatcts" for ::1 at 2015-11-09 19:20:05 +0000
+
+SyntaxError (D:/OneDrive/Documentos/Faculdade/Projetos/LDSO-5D/config/routes.rb:17: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...'received_contacts#index', as 'received_contacts'
+...                               ^):
+  config/routes.rb:17: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.6ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:20:39 +0000
+
+ActionController::RoutingError (No route matches [GET] "/approve_ideas"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Rails/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (70.4ms)
+
+
+Started GET "/received_contacts" for ::1 at 2015-11-09 19:21:46 +0000
+
+SyntaxError (D:/OneDrive/Documentos/Faculdade/Projetos/LDSO-5D/config/routes.rb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...'received_contacts#index', as 'received_contacts'
+...                               ^):
+  config/routes.rb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Rails/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (79.1ms)
+
+
+Started GET "/received_contacts" for ::1 at 2015-11-09 19:22:14 +0000
+Processing by ReceivedContactsController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered received_contacts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (5830.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5859ms (Views: 5857.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:22:20 +0000
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 19:22:20 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 19:22:20 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 19:22:21 +0000
+
+
+Started GET "/month_ideas" for ::1 at 2015-11-09 19:22:23 +0000
+Processing by MonthIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered month_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (433.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 445ms (Views: 443.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:22:25 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (411.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 425ms (Views: 424.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/month_ideas" for ::1 at 2015-11-09 19:22:26 +0000
+Processing by MonthIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered month_ideas/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (445.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 457ms (Views: 457.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/received_contacts" for ::1 at 2015-11-09 19:22:27 +0000
+Processing by ReceivedContactsController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered received_contacts/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (428.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 438ms (Views: 438.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/month_ideas" for ::1 at 2015-11-09 19:22:31 +0000
+Processing by MonthIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered month_ideas/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (518.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 532ms (Views: 530.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:22:33 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (371.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 381ms (Views: 380.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:56:20 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (493.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 504ms (Views: 502.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-09 19:56:57 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered approve_ideas/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (449.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 469ms (Views: 467.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-9f11659d610bd85f9579cef29a17b7272367bcdcd2e2048c60e8ccec7b35b9a8.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/bootstrap.self-83a5692e9410c14a82153b31370b1111d71dd11b448a741f8e4f886ed8a17166.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/approve_ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/ideas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/welcome.self-0fa7f0a8f025ee8b529846e6d831bc2fe72f9d29eed636776613ed47532924e8.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/application.self-1395f36c297df1939dbe24972c8cd081f5dbee459358fc67a729a76ca958dc79.css?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-09 19:56:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-09 19:56:58 +0000
+
+
+Started GET "/received_contacts" for ::1 at 2015-11-09 19:57:00 +0000
+Processing by ReceivedContactsController#index as HTML
+  Rendered layouts/_admin_header.html.erb (1.0ms)
+  Rendered received_contacts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (581.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 592ms (Views: 592.1ms | ActiveRecord: 0.0ms)

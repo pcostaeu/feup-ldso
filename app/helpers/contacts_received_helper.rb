@@ -1,0 +1,2 @@
+module ContactsReceivedHelper
+end
