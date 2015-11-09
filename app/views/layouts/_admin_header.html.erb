@@ -1,33 +1,33 @@
-	<div class="brand">Mais IS</div>
+<div class="brand">Mais IS</div>
 
-		<!-- Navigation -->
-		<nav id="nav" class="navbar navbar-default navbar-static" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-					<a class="navbar-brand" href="aproveIdeas.html">Mais IS</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li>
-				            <%= link_to "Menu Aprovação", approve_path, class: "a" %>
-						</li>
-						<li>
-                            <%= link_to "Ideia do Mês", monthIdea_path, class: "a" %>
-						</li>
-						<li>
-                            <%= link_to "Contactos Recebidos", contactsReceived_path, class: "a" %>
-						</li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container -->
-		</nav>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static" id="nav" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+      <a class="navbar-brand" href="aproveIdeas.html">Mais Ideias Sustentáveis</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to "Menu Aprovação", approve_path, class: "a" %>
+        </li>
+        <li>
+          <%= link_to "Ideia do Mês", monthIdea_path, class: "a" %>
+        </li>
+        <li>
+          <%= link_to "Contactos Recebidos", contactsReceived_path, class: "a" %>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
