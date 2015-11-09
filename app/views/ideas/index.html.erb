@@ -1,13 +1,15 @@
 <%= render "layouts/pt_header" %>
-<div class="container" id="ideas">    
-    <div class="row">      
-            <div class="input-group">
-            <%= form_tag('/ideas', :method => "get",class: "form-group text-center col-md-6 col-lg-6 col-md-offset-3") do %>
-            <%= text_field_tag :search, params[:search],class: "form-control input-lg", placeholder: "Pesquisar Ideia" %> 
-            <%= content_tag(:span, submit_tag("Pesquisar", class: "btn btn-primary input-lg"), class:"input-group-btn") %>              
-            <% end %>               
-         </div>       
-    </div>    
+
+<div class="container" id="ideas">
+
+  <div class="row">
+    <%= form_tag ideas_path, :method => "get", class: "input-group col-md-6 col-lg-6 col-md-offset-3" do %>
+    <%= text_field_tag :search, params[:search],class: "form-control input-lg", placeholder: "Pesquisar Ideia" %>
+    <%= content_tag(:span, submit_tag("Pesquisar", class: "btn btn-primary input-lg"), class:"input-group-btn") %>
+    <% end %>
+    <br>
+  </div>
+
   <div class="row">
     <div class="box">
       <% if @searchideas.present? && params[:search].present?  %>
