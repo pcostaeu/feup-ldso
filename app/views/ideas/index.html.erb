@@ -42,8 +42,8 @@
         <p><%= idea.text %></p>
       </div>
       <div class="center-block text-center">
-        <a class="btn btn-default" href="#">Gostei da ideia</a>
-        <a class="btn btn-default" href="#">Não gostei da ideia</a>
+         <%= button_to 'Gostei da ideia', upvote_idea_path(idea), method: :post, class:"a btn btn-default" %>
+                        <%= button_to 'Não gostei da ideia', downvote_idea_path(idea), method: :post, class:"a btn btn-default" %>
         <table id="votes">
           <tr>
             <td>
