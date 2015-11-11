@@ -1,6 +1,5 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.all
   if params[:search]
     @searchideas = Idea.search(params[:search]).order("created_at DESC")
   else
@@ -19,7 +18,7 @@ class IdeasController < ApplicationController
         @idea.increment!(:upvotes)
         redirect_to ideas_path
 end
-    
+
     def downvote
         @idea = Idea.find(params[:id])
         @idea.increment!(:downvotes)
@@ -37,4 +36,3 @@ private
       params.require(:idea).permit(:author, :email, :title, :text, :picture)
   end
 end
-

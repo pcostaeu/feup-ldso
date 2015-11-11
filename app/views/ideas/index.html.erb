@@ -12,11 +12,10 @@
 
   <div class="row">
     <div class="box">
-      <% if @searchideas.present? && params[:search].present?  %>
       <% @searchideas.each do |searchidea| %>
-      <div class="searchideas col-lg-12 text-center">
+      <div class="col-lg-12 text-center">
         <h2><%= searchidea.title %><br>
-          <small>searchidea.date</small>
+          <small><%= searchidea.date %></small>
         </h2>
         <div class="col-xs-12 col-sm-12 col-md-4">
           <% if searchidea.picture? %>
@@ -26,25 +25,10 @@
         </div>
         <p><%= searchidea.text %></p>
       </div>
-      <% end %>
-      <% else %>
-      <% @ideas.each do |idea| %>
-      <div class="col-lg-12 text-center">
-        <h2><%= idea.title %><br>
-          <small><%= idea.date %></small>
-        </h2>
-        <div class="col-xs-12 col-sm-12 col-md-4">
-          <% if idea.picture? %>
-          <img class="img-responsive img-border img-full" src=<%=idea.picture.url%>
-          alt="">
-          <% end %>
-        </div>
-        <p><%= idea.text %></p>
-      </div>
       <div class="inline text-center">
         <div class="btn-group btn-group-sm">
-          <%= button_to 'Gostei da ideia', upvote_idea_path(idea), method: :post, role:"button" ,class:"a btn btn-default" %>
-          <%= button_to 'Não gostei da ideia', downvote_idea_path(idea), method: :post,role:"button" , class:"a btn btn-default" %>
+          <%= button_to 'Gostei da ideia', upvote_idea_path(searchidea), method: :post, role:"button" ,class:"a btn btn-default" %>
+          <%= button_to 'Não gostei da ideia', downvote_idea_path(searchidea), method: :post,role:"button" , class:"a btn btn-default" %>
         </div>
         <table id="votes">
           <tr>
@@ -53,16 +37,15 @@
               </h5>
             </td>
             <td>
-              <h4 id="upvote">+<%= idea.upvotes %></h4>
+              <h4 id="upvote">+<%= searchidea.upvotes %></h4>
             </td>
             <td>
-              <h4 id="downvote">-<%= idea.downvotes %></h4>
+              <h4 id="downvote">-<%= searchidea.downvotes %></h4>
             </td>
           </tr>
         </table>
         <hr>
       </div>
-      <% end %>
       <% end %>
     </div>
   </div>
