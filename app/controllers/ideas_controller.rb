@@ -16,13 +16,13 @@ class IdeasController < ApplicationController
      def upvote
         @idea = Idea.find(params[:id])
         @idea.increment!(:upvotes)
-        redirect_to ideas_path
+        redirect_to :back
 end
 
     def downvote
         @idea = Idea.find(params[:id])
         @idea.increment!(:downvotes)
-        redirect_to ideas_path
+        redirect_to :back
 end
 
   def create
