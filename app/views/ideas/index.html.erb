@@ -42,8 +42,10 @@
         <p><%= idea.text %></p>
       </div>
       <div class="inline text-center">
-         <%= button_to 'Gostei da ideia', upvote_idea_path(idea), method: :post, class:"btn btn-default" %>
-                        <%= button_to 'Não gostei da ideia', downvote_idea_path(idea), method: :post, class:"btn btn-default" %>
+        <div class="btn-group btn-group-sm">
+          <%= button_to 'Gostei da ideia', upvote_idea_path(idea), method: :post, role:"button" ,class:"a btn btn-default" %>
+          <%= button_to 'Não gostei da ideia', downvote_idea_path(idea), method: :post,role:"button" , class:"a btn btn-default" %>
+        </div>
         <table id="votes">
           <tr>
             <td>

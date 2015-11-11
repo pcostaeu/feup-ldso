@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109190716) do
+ActiveRecord::Schema.define(version: 20151111165736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20151109190716) do
     t.string   "title"
     t.text     "text"
     t.string   "image"
-    t.integer  "upvotes"
+    t.integer  "upvotes",    default: 0
     t.integer  "downvotes",  default: 0
     t.integer  "topic_id"
     t.boolean  "approved"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20151109190716) do
   end
 
   create_table "month_ideas", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "name"
+    t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

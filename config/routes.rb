@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'topics/index'
+
+  get 'topics/new'
+
+  get 'topics/create'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
