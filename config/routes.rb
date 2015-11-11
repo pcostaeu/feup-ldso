@@ -23,20 +23,32 @@ Rails.application.routes.draw do
   get '/ideas_en' => 'ideas#index_en', as: 'ideas_english'
   get '/contacts_en' => 'contacts#index_en', as: 'contacts_english'
   get '/admin' => 'admin#login', as: 'login'
-    
-    
-   
-    resources :ideas do
-  member do
-    post :upvote
+
+
+
+  resources :ideas do
+    member do
+      post :upvote
+    end
   end
-    
-end
-     resources :ideas do
-  member do
-         post :downvote
-  end
-end
+
+  resources :ideas do
+    member do
+       post :downvote
+    end
+   end
+
+   resources :approve_ideas do
+     member do
+       post :approve
+     end
+   end
+
+   resources :approve_ideas do
+     member do
+        post :delete
+     end
+    end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

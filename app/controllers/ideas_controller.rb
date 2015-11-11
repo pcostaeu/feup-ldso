@@ -1,9 +1,9 @@
 class IdeasController < ApplicationController
   def index
   if params[:search] && !params[:search].blank?
-    @searchideas = Idea.search(params[:search]).order("created_at DESC")
+    @ideas = Idea.search(params[:search]).order("created_at DESC")
   else
-    @searchideas = Idea.all.order('created_at DESC')
+    @ideas = Idea.where(approved: true).order('created_at DESC')
   end
   end
 
@@ -13,11 +13,11 @@ class IdeasController < ApplicationController
 
   def new
   end
-     def upvote
+  def upvote
         @idea = Idea.find(params[:id])
         @idea.increment!(:upvotes)
         redirect_to :back
-end
+  end
 
     def downvote
         @idea = Idea.find(params[:id])
@@ -28,6 +28,7 @@ end
   def create
     @idea = Idea.new(idea_params)
     @idea.date = Time.zone.now.to_date;
+    @idea.approved = false;
     @idea.save
     redirect_to @idea
   end
