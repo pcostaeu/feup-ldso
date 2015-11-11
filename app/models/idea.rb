@@ -4,6 +4,6 @@ class Idea < ActiveRecord::Base
 
     def self.search(search)
       where("title ILIKE ?", "%#{search}%")
-      where("text ILIKE ?", "%#{search}%")
+      where("text ILIKE ?", "% #{search} %")
     end
 end
