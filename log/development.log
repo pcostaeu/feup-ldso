@@ -12299,3 +12299,3105 @@ Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 17:10:41 +0000
 
 
 Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 17:10:41 +0000
+
+
+Started GET "/ideas?crescente=" for ::1 at 2015-11-12 17:15:00 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"crescente"=>""}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio ASC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_header.html.erb (415.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 491ms (Views: 477.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 17:15:01 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 17:15:01 +0000
+
+
+Started GET "/ideas?decrescente=" for ::1 at 2015-11-12 17:15:06 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"decrescente"=>""}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (357.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 411.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 17:15:07 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 17:15:07 +0000
+
+
+Started GET "/" for ::1 at 2015-11-12 20:51:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (38.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  Rendered ideas/_new.html.erb (24.0ms)
+  Rendered welcome/index.html.erb within layouts/application (55.0ms)
+  Rendered layouts/_header.html.erb (650.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 779ms (Views: 762.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 20:51:21 +0000
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  Rendered ideas/_new.html.erb (1.0ms)
+  Rendered welcome/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (333.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 401ms (Views: 401.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:51:22 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-12 20:51:22 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-12 20:51:25 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (3.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (174.1ms)
+  Rendered layouts/_header.html.erb (425.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 703ms (Views: 548.5ms | ActiveRecord: 137.1ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:51:26 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 20:51:33 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (text ILIKE '% pinto %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (350.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 408ms (Views: 406.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:51:34 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:51:34 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 20:52:06 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (text ILIKE '%pinto%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (350.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 425ms (Views: 414.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 20:52:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:52:07 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 20:52:10 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (327.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 386ms (Views: 383.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:52:11 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:52:11 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 20:52:17 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (379.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 452ms (Views: 450.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:52:17 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:52:18 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 20:52:25 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (text ILIKE '%pinto%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (360.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 434ms (Views: 432.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:52:26 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:52:26 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 20:52:35 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (text ILIKE '% a %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_header.html.erb (355.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 432ms (Views: 424.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:52:35 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:52:35 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 20:53:17 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (text ILIKE '% a %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (369.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 446ms (Views: 444.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:53:18 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:53:18 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 20:53:27 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (325.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 405ms (Views: 397.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:53:28 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 20:55:08 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (text ILIKE '% a %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_header.html.erb (378.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 468ms (Views: 460.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:55:09 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 20:55:12 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_header.html.erb (444.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 527ms (Views: 522.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 20:55:13 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 20:55:13 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:19:29 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (22.5ms)
+  Rendered layouts/_header.html.erb (374.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 459ms (Views: 440.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:19:29 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:19:30 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:19:33 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (2 for 1) in: title ILIKE ?):
+  app/models/idea.rb:6:in `search'
+  app/controllers/ideas_controller.rb:4:in `index'
+
+
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (500.1ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (450.2ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (1038.1ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:27:12 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (2 for 1) in: title ILIKE ?):
+  app/models/idea.rb:6:in `search'
+  app/controllers/ideas_controller.rb:4:in `index'
+
+
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (496.9ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (459.3ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (1053.7ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:28:25 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (14.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title or text ILIKE '%a%')  ORDER BY created_at DESC
+PG::DatatypeMismatch: ERROR:  argument of OR must be type boolean, not type character varying
+LINE 1: SELECT "ideas".* FROM "ideas" WHERE (title or text ILIKE '%a...
+                                             ^
+: SELECT "ideas".* FROM "ideas" WHERE (title or text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 14.5ms)
+
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of OR must be type boolean, not type character varying
+LINE 1: SELECT "ideas".* FROM "ideas" WHERE (title or text ILIKE '%a...
+                                             ^
+: SELECT "ideas".* FROM "ideas" WHERE (title or text ILIKE '%a%')  ORDER BY created_at DESC):
+    18: 
+    19:   <div class="row">
+    20:     <div class="box">
+    21:       <% @ideas.each do |idea| %>
+    22:       <div class="col-lg-12 text-center">
+    23:         <h2><%= idea.title %><br>
+    24:           <small><%= idea.date.strftime("%B %d, %Y")  %></small>
+  app/views/ideas/index.html.erb:21:in `_app_views_ideas_index_html_erb___992749920_95466740'
+
+
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (496.7ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (441.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (1013.7ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:29:39 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title union text ILIKE '%a%')  ORDER BY created_at DESC[0m
+PG::SyntaxError: ERROR:  syntax error at or near "union"
+LINE 1: SELECT "ideas".* FROM "ideas" WHERE (title union text ILIKE ...
+                                                   ^
+: SELECT "ideas".* FROM "ideas" WHERE (title union text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "union"
+LINE 1: SELECT "ideas".* FROM "ideas" WHERE (title union text ILIKE ...
+                                                   ^
+: SELECT "ideas".* FROM "ideas" WHERE (title union text ILIKE '%a%')  ORDER BY created_at DESC):
+    18: 
+    19:   <div class="row">
+    20:     <div class="box">
+    21:       <% @ideas.each do |idea| %>
+    22:       <div class="col-lg-12 text-center">
+    23:         <h2><%= idea.title %><br>
+    24:           <small><%= idea.date.strftime("%B %d, %Y")  %></small>
+  app/views/ideas/index.html.erb:21:in `_app_views_ideas_index_html_erb___992749920_95466740'
+
+
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (453.2ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (417.6ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (948.3ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:40:05 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text LIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (362.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 439ms (Views: 431.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:40:06 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:40:13 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%luis%' OR text LIKE '%luis%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (386.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 445ms (Views: 443.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:40:13 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:40:13 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:42:23 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis %' OR text LIKE '% luis %' OR author LIKE '% luis %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (334.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 415ms (Views: 408.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:42:23 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:42:23 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:42:23 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:42:23 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:23 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:42:24 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:42:26 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_header.html.erb (361.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 440ms (Views: 436.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:42:26 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:42:27 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:42:29 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis %' OR text LIKE '% luis %' OR author LIKE '% luis %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (310.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 365ms (Views: 362.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:42:29 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:42:29 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:42:42 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a %' OR text LIKE '% a %' OR author LIKE '% a %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (366.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 443ms (Views: 440.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:42:43 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:42:43 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:42:56 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a %' OR text ILIKE '% a %' OR author ILIKE '% a %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (323.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 386ms (Views: 378.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:42:57 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:42:59 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (326.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 397ms (Views: 395.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:00 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:00 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:43:02 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis %' OR text ILIKE '% luis %' OR author ILIKE '% luis %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_header.html.erb (315.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 369ms (Views: 367.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:02 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:02 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:43:20 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis %' OR text ILIKE '% luis %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (341.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 398ms (Views: 391.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:43:20 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:21 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:43:24 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (363.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 426ms (Views: 424.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:24 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:24 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:43:27 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a %' OR text ILIKE '% a %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_header.html.erb (344.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 403ms (Views: 401.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:27 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:27 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:43:36 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a# %' OR text ILIKE '% a# %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_header.html.erb (313.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 370ms (Views: 362.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:43:37 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:38 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:38 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:43:41 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (2.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (345.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 421ms (Views: 420.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:42 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:42 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:43:43 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a# %' OR text ILIKE '% a# %')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (348.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 411.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:43:43 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:43:43 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:01 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%# {search} #%' OR text ILIKE '% a# %')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (326.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 388ms (Views: 381.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:01 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:01 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:12 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a#%' OR text ILIKE '%a#%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_header.html.erb (334.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 394ms (Views: 385.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:13 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-12 21:44:15 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_header.html.erb (311.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 387ms (Views: 384.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:16 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a#%' OR text ILIKE '%a#%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (336.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 402ms (Views: 399.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:17 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:17 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:39 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_header.html.erb (434.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 519ms (Views: 508.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:40 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:41 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:42 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (331.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 390ms (Views: 387.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:43 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:43 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:44:53 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a%' OR text ILIKE '% a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (319.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 380ms (Views: 374.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:53 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:53 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:44:56 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_header.html.erb (366.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 450ms (Views: 446.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:56 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:56 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:44:58 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis%' OR text ILIKE '% luis%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (314.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 367ms (Views: 364.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:44:59 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:44:59 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:45:07 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%luis#%' OR text ILIKE '%luis#%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (342.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 401ms (Views: 394.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:08 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=&commit=Pesquisar" for ::1 at 2015-11-12 21:45:10 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_header.html.erb (377.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 455ms (Views: 451.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:11 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:11 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:45:13 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a#%' OR text ILIKE '%a#%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_header.html.erb (385.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 453ms (Views: 452.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:14 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:14 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:45:25 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_header.html.erb (369.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 440ms (Views: 431.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:45:25 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:45:25 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:26 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 21:45:29 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%pinto%' OR text ILIKE '%pinto%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (309.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 367ms (Views: 365.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:29 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:29 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:45:32 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%luis%' OR text ILIKE '%luis%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_header.html.erb (307.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 362ms (Views: 360.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:33 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:33 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:45:35 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (343.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 409.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:36 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:36 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:45:48 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a%' OR text ILIKE ' %a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (323.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 382ms (Views: 374.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:49 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:49 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=ahhha&commit=Pesquisar" for ::1 at 2015-11-12 21:45:55 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ahhha", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% ahhha%' OR text ILIKE ' %ahhha%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (344.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 410.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:55 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:55 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 21:45:58 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% pinto%' OR text ILIKE ' %pinto%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (307.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 360ms (Views: 357.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:45:58 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:45:58 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis%C2%B4&commit=Pesquisar" for ::1 at 2015-11-12 21:46:01 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis´", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (38.1ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis´%' OR text ILIKE ' %luis´%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (48.1ms)
+  Rendered layouts/_header.html.erb (329.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 420ms (Views: 381.7ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:46:02 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:46:02 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-12 21:46:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_header.html.erb (651.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 776ms (Views: 749.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:46:53 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (3.0ms)
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% luis%' OR text ILIKE ' %luis%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (327.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 389ms (Views: 388.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:46:54 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:46:54 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:46:56 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '% a%' OR text ILIKE ' %a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_header.html.erb (334.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 416ms (Views: 413.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:46:56 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:46:56 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-12 21:46:57 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (295.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 367ms (Views: 365.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ideas" for ::1 at 2015-11-12 21:47:11 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_header.html.erb (309.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 379ms (Views: 370.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:12 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:47:14 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (346.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 414ms (Views: 412.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:15 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:15 +0000
+
+
+Started POST "/ideas/5/downvote" for ::1 at 2015-11-12 21:47:19 +0000
+Processing by IdeasController#downvote as HTML
+  Parameters: {"authenticity_token"=>"kq3Xf6IwtnE6VyimKwJ2To9jLaUNtD4Ycd3ABGTRrCc9nbT11adDUWOPa2Ad0dpqfh/vs8CT76MxQGLGADtdHg==", "id"=>"5"}
+  [1m[35mIdea Load (0.0ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "ideas" SET "downvotes" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3  [["downvotes", 1], ["updated_at", "2015-11-12 21:47:19.476928"], ["id", 5]]
+  [1m[36m (27.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar
+Completed 302 Found in 43ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:47:19 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (325.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 385ms (Views: 382.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:20 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:20 +0000
+
+
+Started GET "/ideas?decrescente=" for ::1 at 2015-11-12 21:47:22 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"decrescente"=>""}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_header.html.erb (328.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 393ms (Views: 390.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:22 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:22 +0000
+
+
+Started GET "/ideas?decrescente=" for ::1 at 2015-11-12 21:47:51 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"decrescente"=>""}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (21.9ms)
+  Rendered layouts/_header.html.erb (315.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 389ms (Views: 379.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/admin.self-1ae1203424e50cd7544d189d661484b30ba0d7faf9c53624e691057e630c57dd.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/approve_ideas.self-fa3926391dfde52dcb43b74a8ed260eb16c9cbb3268d3d1531651d5ea2a43e7b.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/ideas.self-97fd4da04595e9298b1851c224d00d06a076496e4a3487db11d622b32ace6613.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/welcome.self-f49a2684a0cc3555f400c5142d1260575107b42e7bffa593a629f6d25ca43e71.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/application.self-cb5dd6335f5051afddb06ae84199cd0786a557ea64455324f4f8eff6c6998d3b.css?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:52 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=luis&commit=Pesquisar" for ::1 at 2015-11-12 21:47:55 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"luis", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%luis%' OR text ILIKE '%luis%' OR author ILIKE '%luis%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (310.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 370ms (Views: 367.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:47:55 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:47:55 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=pinto&commit=Pesquisar" for ::1 at 2015-11-12 21:47:59 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pinto", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (0.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%pinto%' OR text ILIKE '%pinto%' OR author ILIKE '%pinto%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (310.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 368ms (Views: 365.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:48:00 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:48:00 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=a&commit=Pesquisar" for ::1 at 2015-11-12 21:48:02 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%a%' OR text ILIKE '%a%' OR author ILIKE '%a%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_header.html.erb (343.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 412ms (Views: 410.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:48:02 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:48:03 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=ahha&commit=Pesquisar" for ::1 at 2015-11-12 21:48:05 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ahha", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%ahha%' OR text ILIKE '%ahha%' OR author ILIKE '%ahha%')  ORDER BY created_at DESC
+  Rendered ideas/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (345.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 419ms (Views: 417.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:48:06 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:48:06 +0000
+
+
+Started GET "/ideas?utf8=%E2%9C%93&search=ahhha&commit=Pesquisar" for ::1 at 2015-11-12 21:48:09 +0000
+Processing by IdeasController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ahhha", "commit"=>"Pesquisar"}
+  Rendered layouts/_pt_header.html.erb (1.0ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE (title ILIKE '%ahhha%' OR text ILIKE '%ahhha%' OR author ILIKE '%ahhha%')  ORDER BY created_at DESC[0m
+  Rendered ideas/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (358.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 427ms (Views: 424.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-12 21:48:10 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff2" for ::1 at 2015-11-12 21:48:10 +0000
