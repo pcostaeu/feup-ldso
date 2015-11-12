@@ -5,8 +5,14 @@ class IdeasController < ApplicationController
     else
       @ideas = Idea.where(approved: true).order('created_at DESC')
     end
-  end
-
+    if params[:crescente]
+          @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio ASC')
+    end
+    if params[:decrescente]
+          @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC')
+      end
+  end 
+    
   def show
     @idea = Idea.find(params[:id])
   end
