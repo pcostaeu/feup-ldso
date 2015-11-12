@@ -13,3 +13,5 @@
 /tmp
 *.log
 Gemfile.lock
+log/development.log
+Gemfile.lock
