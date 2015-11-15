@@ -50,3 +50,8 @@ Rails.application.routes.draw do
     end
   end
 end
+ resources :month_ideas do
+     member do
+         post :select
+     end
+   end

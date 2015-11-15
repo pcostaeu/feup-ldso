@@ -16,9 +16,9 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(http://www.unilab.edu.br/wp-content/uploads/2015/09/arvorelon.jpg)">
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= Idea.find(MonthIdea.last.idea_id).picture.url%>)">
                 <div class="carousel-caption">
-                  <h2 id="scrolling_text">Título 1</h2>
+                  <h2 id="scrolling_text">Ideia do mês: <%= Idea.find(MonthIdea.last.idea_id).title%></h2>
                 </div>
               </div>
             </div>
