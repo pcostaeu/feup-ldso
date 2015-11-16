@@ -8,11 +8,11 @@
     <%= content_tag(:span, submit_tag("Pesquisar", class: "btn btn-primary input-lg"), class:"input-group-btn") %>
     <% end %>
     <br>
-    <%= button_to ideas_path, :method => "get", name:"crescente", class:"btn btn-default btn-md" do%>
+      <%= button_to ideas_path, :method => "get", name:"crescente", class:"btn btn-default btn-md col-md-6" do%>
     <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes"></span>
     Crescente
     <% end %>
-    <%= button_to ideas_path, :method => "get", name:"decrescente", class:"btn btn-default btn-md" do%>
+    <%= button_to ideas_path, :method => "get", name:"decrescente", class:"btn btn-default btn-md col-md-6" do%>
     <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes-alt"></span>
     Decrescente
     <% end %>
