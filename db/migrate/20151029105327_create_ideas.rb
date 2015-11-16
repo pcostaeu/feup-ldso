@@ -3,7 +3,6 @@ class CreateIdeas < ActiveRecord::Migration
     create_table :ideas do |t|
       t.string :title
       t.text :text
-      t.string :image
       t.integer :upvotes
       t.integer :downvotes
       t.integer :topic_id

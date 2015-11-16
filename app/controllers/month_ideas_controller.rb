@@ -7,8 +7,12 @@ class MonthIdeasController < ApplicationController
   end
 
   def select
-    @month_idea = MonthIdea.last
-    if (@month_idea.created_at.month != Time.zone.now.to_date.month)
+    if(MonthIdea.all.size != 0)
+      @month_idea = MonthIdea.last
+      if (@month_idea.created_at.month != Time.zone.now.to_date.month)
+        @month_idea = MonthIdea.new
+      end
+    else
       @month_idea = MonthIdea.new
     end
 
