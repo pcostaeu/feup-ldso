@@ -26,11 +26,13 @@
               </div>
             </div>
             <% end %>
+            <% if Idea.all.size != 0 %>
             <% if @month_idea == false %>
             <div class="item active">
               <% else %>
               <div class="item">
                 <%end %>
+
                 <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
                   <div class="carousel-caption">
                     <h2 id="scrolling_text">Mais Votada:
@@ -39,6 +41,7 @@
                 </div>
               </div>
             </div>
+            <%end%>
 
             <!-- Controls -->
             <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic">

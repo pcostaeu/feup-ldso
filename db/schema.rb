@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20151112115720) do
   create_table "ideas", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.string   "image"
     t.integer  "upvotes",    default: 0
     t.integer  "downvotes",  default: 0
     t.integer  "topic_id"
