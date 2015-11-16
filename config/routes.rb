@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'concretize_idea/index'
+
+  get 'concretize_idea/create'
+
+  get 'concretize_idea/destroy'
+
+  get 'concretize_idea/update'
+
   get 'topics/index'
 
   get 'topics/new'

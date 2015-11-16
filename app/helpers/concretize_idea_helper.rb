@@ -1,0 +1,2 @@
+module ConcretizeIdeaHelper
+end
