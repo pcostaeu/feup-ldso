@@ -6,13 +6,13 @@ class IdeasController < ApplicationController
       @ideas = Idea.where(approved: true).order('created_at DESC')
     end
     if params[:crescente]
-          @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio ASC')
+      @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio ASC')
     end
     if params[:decrescente]
-          @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC')
-      end
-  end 
-    
+      @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC')
+    end
+  end
+
   def show
     @idea = Idea.find(params[:id])
   end
@@ -46,6 +46,10 @@ class IdeasController < ApplicationController
     @idea.destroy
     FileUtils.rm_rf(var)
     redirect_to ideas_path
+  end
+
+  def self.search_by_month(month)
+    where('extract(month from created_at) = ? ', month)
   end
 
   private

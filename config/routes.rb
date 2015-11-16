@@ -49,9 +49,9 @@ Rails.application.routes.draw do
       post :delete
     end
   end
+  resources :month_ideas do
+    member do
+      post :select
+    end
+  end
 end
- resources :month_ideas do
-     member do
-         post :select
-     end
-   end
