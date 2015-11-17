@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
+    @has_ideas = Idea.all.size
+
     if(MonthIdea.all.size != 0)
       @month_idea = Idea.find(MonthIdea.last.idea_id)
     else

@@ -62,4 +62,7 @@ Rails.application.routes.draw do
       post :select
     end
   end
+
+  get '*unmatched_route', to: 'application#not_found'
+
 end
