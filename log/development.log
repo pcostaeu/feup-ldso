@@ -2982,3 +2982,524 @@ Processing by ApplicationController#not_found as
   Rendered layouts/_header.html.erb (204.9ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 404 Not Found in 251ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/1" for ::1 at 2015-11-18 09:34:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mIdea Load (0.5ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_pt_header.html.erb (1.5ms)
+  Rendered ideas/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (472.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 529ms (Views: 492.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-18 09:34:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (13.7ms)
+  Rendered welcome/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_header.html.erb (203.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 234ms (Views: 227.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:34:43 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:34:44 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 09:34:44 +0000
+
+
+Started POST "/ideas" for ::1 at 2015-11-18 09:35:35 +0000
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b5S/UHaxb6MbZbdr2V00AXinsGOEoXa+pVWdU9xiQLJsiw7CgzkJ2qmlSoPV69lsipUVOq0ZJtKs1+goEXrFSQ==", "idea"=>{"author"=>"Fernando", "email"=>"nando@gmail.com", "title"=>"Luz", "text"=>"A luz é uma onda eletromagnética, cujo comprimento de onda se inclui num determinado intervalo dentro do qual o olho humano é a ela sensível.[1] Trata-se, de outro modo, de uma radiação electromagnética que se situa entre a radiação infravermelha e a radiação ultravioleta. As três grandezas físicas básicas da luz são herdadas das grandezas de toda e qualquer onda eletromagnética: intensidade (ou amplitude), frequência e polarização (ângulo de vibração). No caso específico da luz, a intensidade se identifica com o brilho e a frequência com a cor. Deve ser ressaltada também a dualidade onda-partícula, característica da luz como fenômeno físico, em que esta tem propriedades de onda e partículas, sendo válidas ambas as teorias sobre a natureza da luz.\r\n\r\nUm raio de luz é a trajetória da luz em determinado espaço, e sua representação indica de onde a luz é criada (fonte) e para onde ela se dirige. O conceito de raio de luz foi introduzido por Alhazen. Propagando-se em meio homogéneo, a luz percorre trajetórias retilíneas; somente em meios não-homogêneos a luz pode descrever trajetórias curvas."}, "commit"=>"Submeter"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ideas" ("author", "email", "title", "text", "date", "approved", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["author", "Fernando"], ["email", "nando@gmail.com"], ["title", "Luz"], ["text", "A luz é uma onda eletromagnética, cujo comprimento de onda se inclui num determinado intervalo dentro do qual o olho humano é a ela sensível.[1] Trata-se, de outro modo, de uma radiação electromagnética que se situa entre a radiação infravermelha e a radiação ultravioleta. As três grandezas físicas básicas da luz são herdadas das grandezas de toda e qualquer onda eletromagnética: intensidade (ou amplitude), frequência e polarização (ângulo de vibração). No caso específico da luz, a intensidade se identifica com o brilho e a frequência com a cor. Deve ser ressaltada também a dualidade onda-partícula, característica da luz como fenômeno físico, em que esta tem propriedades de onda e partículas, sendo válidas ambas as teorias sobre a natureza da luz.\r\n\r\nUm raio de luz é a trajetória da luz em determinado espaço, e sua representação indica de onde a luz é criada (fonte) e para onde ela se dirige. O conceito de raio de luz foi introduzido por Alhazen. Propagando-se em meio homogéneo, a luz percorre trajetórias retilíneas; somente em meios não-homogêneos a luz pode descrever trajetórias curvas."], ["date", "2015-11-18"], ["approved", "f"], ["created_at", "2015-11-18 09:35:35.542288"], ["updated_at", "2015-11-18 09:35:35.542288"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/ideas/2
+Completed 302 Found in 21ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/ideas/2" for ::1 at 2015-11-18 09:35:35 +0000
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_pt_header.html.erb (0.8ms)
+  Rendered ideas/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (192.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 204ms (Views: 202.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:35:35 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:35:44 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.8ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  [1m[36mTopic Load (0.6ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY "topics"."name" ASC[0m
+  Rendered approve_ideas/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_header.html.erb (198.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 229ms (Views: 226.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/topics/new" for ::1 at 2015-11-18 09:36:06 +0000
+Processing by TopicsController#new as HTML
+  Parameters: {"authenticity_token"=>"qgUIgYJNbm68igtKIL3glI7j1w6AQ9mp9nG/Dpu1NWqpGrkTd8UIFw5K9qIsCw35fNFyV6n7icX/88p1Vq2wkQ==", "id"=>"new"}
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered topics/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (204.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 214ms (Views: 213.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:36:07 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 09:36:21 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (1.4ms)
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (202.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 216ms (Views: 213.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:36:21 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 09:36:21 +0000
+
+
+Started POST "/topics" for ::1 at 2015-11-18 09:36:56 +0000
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rcj9cbH5Uw3oKctCIeVAzVK+ueLEKOBbWvzIOV6hxdGu10zjRHE1dFrpNqotU62goIwcu+2QsDdTfr1Ck7lAKg==", "topic"=>{"name"=>"Eletricidade", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fba49cf4af8 @tempfile=#<Tempfile:/var/folders/v2/l4rv9v9d3nbf8m93mw8wmqwc0000gn/T/RackMultipart20151118-20623-1e12cae.jpg>, @original_filename="luz.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[picture]\"; filename=\"luz.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submeter"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Eletricidade"], ["picture", "luz.jpg"], ["created_at", "2015-11-18 09:36:56.965565"], ["updated_at", "2015-11-18 09:36:56.965565"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/approve_ideas
+Completed 302 Found in 17ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:36:56 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.7ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY "topics"."name" ASC[0m
+  Rendered approve_ideas/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (208.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 221ms (Views: 219.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:36:57 +0000
+
+
+Started POST "/approve_ideas/2/approve" for ::1 at 2015-11-18 09:37:10 +0000
+Processing by ApproveIdeasController#approve as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ytSkH2kpDl6UN59VRGNknuMEX09h6I9GmLLZA2o11PwNOMCiCzCQMiQI5VZp2D/ib60JBQ/8lET4L4fwLBSqA==", "idea"=>{"topic_id"=>"2"}, "commit"=>"Aprovar", "id"=>"2"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "ideas" SET "approved" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3  [["approved", "t"], ["updated_at", "2015-11-18 09:37:10.290202"], ["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "ideas" SET "topic_id" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["topic_id", 2], ["updated_at", "2015-11-18 09:37:10.293737"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/approve_ideas
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:37:10 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.3ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (205.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 214ms (Views: 213.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:37:10 +0000
+
+
+Started GET "/ideas/2" for ::1 at 2015-11-18 09:37:13 +0000
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (206.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 216ms (Views: 214.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:37:14 +0000
+
+
+Started GET "/ideas/2" for ::1 at 2015-11-18 09:39:22 +0000
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (210.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 220ms (Views: 219.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:39:23 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-18 09:39:30 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.6ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_header.html.erb (197.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 226ms (Views: 224.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:39:30 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (203.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 404 Not Found in 251ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:39:30 +0000
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2015-11-18 09:39:30 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (208.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 252ms (Views: 251.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.svg" for ::1 at 2015-11-18 09:39:31 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (211.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 253ms (Views: 252.9ms | ActiveRecord: 0.0ms)
