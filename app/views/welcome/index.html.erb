@@ -18,25 +18,43 @@
           <div class="carousel-inner">
             <% if @month_idea != false %>
             <div class="item active">
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @month_idea.picture.url%>)">
-                <div class="carousel-caption">
-                  <h2 id="scrolling_text">Ideia do mês:
-                    <%= @month_idea.title%></h2>
-                </div>
+              <% if @month_idea.picture? %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @month_idea.picture.url%>)">
+                  <div class="carousel-caption">
+                    <h2 id="scrolling_text">Ideia do mês:
+                      <%= @month_idea.title%></h2>
+                    </div>
+                  </div>
+                <% else %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @month_idea.topic.picture.url%>)">
+                  <div class="carousel-caption">
+                    <h2 id="scrolling_text">Ideia do mês:
+                      <%= @month_idea.title%></h2>
+                    </div>
+                  </div>
+                <% end %>
               </div>
-            </div>
             <% end %>
             <% if @month_idea == false %>
             <div class="item active">
             <% else %>
             <div class="item">
             <% end %>
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
-                <div class="carousel-caption">
-                  <h2 id="scrolling_text">Mais Votada:
-                    <%= @most_voted_idea.title %></h2>
+              <% if @most_voted_idea.picture? %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
+                  <div class="carousel-caption">
+                    <h2 id="scrolling_text">Mais Votada:
+                      <%= @most_voted_idea.title %></h2>
+                  </div>
                 </div>
-              </div>
+              <% else %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.topic.picture.url %>)">
+                  <div class="carousel-caption">
+                    <h2 id="scrolling_text">Mais Votada:
+                      <%= @most_voted_idea.title %></h2>
+                    </div>
+                  </div>
+              <% end %>
             </div>
           </div>
           <!-- Controls -->
