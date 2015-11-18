@@ -1,0 +1,2984 @@
+  [1m[36mActiveRecord::SchemaMigration Load (11.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'concretize_ideas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contacts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ideas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'month_ideas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'topics'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-18 08:44:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.5ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (1.5ms)
+  Rendered ideas/_new.html.erb (15.0ms)
+  Rendered welcome/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (13110.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 13191ms (Views: 13150.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for 127.0.0.1 at 2015-11-18 08:45:12 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for 127.0.0.1 at 2015-11-18 08:45:12 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/assets/counter/counter.png" for 127.0.0.1 at 2015-11-18 08:45:13 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (1.1ms)
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (195.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 208ms (Views: 204.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/assets/counter/counter.png" for 127.0.0.1 at 2015-11-18 08:46:59 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:47:52 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (1.5ms)
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (217.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 231ms (Views: 228.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:47:53 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:48:50 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.8ms)
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (205.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 219ms (Views: 215.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:50 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:48:51 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:49:35 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.8ms)
+  Rendered ideas/_new.html.erb (2.6ms)
+  Rendered welcome/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (177.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 192ms (Views: 188.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:49:35 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:49:36 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:49:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (200.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 216ms (Views: 212.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:49:44 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:50:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.9ms)
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (212.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 226ms (Views: 223.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:12 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:50:13 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:50:13 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:50:13 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:50:22 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (2.0ms)
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (174.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 188ms (Views: 184.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:50:23 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:51:25 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.8ms)
+  Rendered ideas/_new.html.erb (2.1ms)
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (196.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 211ms (Views: 208.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:51:25 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:51:39 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (209.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 222ms (Views: 219.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:51:40 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:52:00 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.9ms)
+  Rendered ideas/_new.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (194.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 209ms (Views: 206.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:52:01 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:52:08 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.9ms)
+  Rendered ideas/_new.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (194.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 205.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:52:09 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:52:26 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (2.3ms)
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (201.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 217ms (Views: 213.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:52:26 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:52:47 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.0ms)
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (202.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 214ms (Views: 211.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:52:48 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:52:48 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:56:16 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.0ms)
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (199.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 212ms (Views: 209.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:56:16 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:56:16 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 08:56:17 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.8ms)
+  [1m[36mIdea Load (1.5ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (194.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 207ms (Views: 204.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:56:17 +0000
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 08:56:20 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (205.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 214ms (Views: 212.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:56:20 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:56:27 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered ideas/_new.html.erb (1.2ms)
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (201.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 215ms (Views: 211.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-18 08:56:27 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/_new.html.erb (1.1ms)
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (210.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 219.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:56:28 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:56:28 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:56:28 +0000
+
+
+Started GET "/assets/counter/counter.png" for ::1 at 2015-11-18 08:56:28 +0000
+
+
+Started POST "/ideas" for ::1 at 2015-11-18 08:58:24 +0000
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d6pqfRzaBUC0ZFtf+2XDUnSR6Wypu93imHWbfB7JLAd0tdvv6VJjOQakprf30y4/hqNMNYADjY6R9+4H09Gp/A==", "idea"=>{"author"=>"Joana", "email"=>"joana@gmail.com", "title"=>"Joana", "text"=>"O nome próprio Joana significa graça divina e indica uma pessoa que só amadurece depois de muito lutar pelo equilíbrio entre a razão e o coração. Chega a ser vista como alguém que não sabe o que quer, mas quando se decide entra de corpo e alma na conquista dos seus ideais[carece de fontes]. O nome possui variantes conhecidas, como :\r\n\r\nGianna ou Giovanna, no italiano\r\nJoan ou Jane, no inglês\r\nJuana, em espanhol", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fb62c30cc00 @tempfile=#<Tempfile:/var/folders/v2/l4rv9v9d3nbf8m93mw8wmqwc0000gn/T/RackMultipart20151118-20137-9u3aaz.png>, @original_filename="images.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"images.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Submeter"}
+  [1m[36m (12.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (26.3ms)[0m  INSERT INTO "ideas" ("author", "email", "title", "text", "picture", "date", "approved", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "Joana"], ["email", "joana@gmail.com"], ["title", "Joana"], ["text", "O nome próprio Joana significa graça divina e indica uma pessoa que só amadurece depois de muito lutar pelo equilíbrio entre a razão e o coração. Chega a ser vista como alguém que não sabe o que quer, mas quando se decide entra de corpo e alma na conquista dos seus ideais[carece de fontes]. O nome possui variantes conhecidas, como :\r\n\r\nGianna ou Giovanna, no italiano\r\nJoan ou Jane, no inglês\r\nJuana, em espanhol"], ["picture", "images.png"], ["date", "2015-11-18"], ["approved", "f"], ["created_at", "2015-11-18 08:58:25.017719"], ["updated_at", "2015-11-18 08:58:25.017719"]]
+  [1m[36m (12.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/ideas/1
+Completed 302 Found in 86ms (ActiveRecord: 52.5ms)
+
+
+Started GET "/ideas/1" for ::1 at 2015-11-18 08:58:25 +0000
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered ideas/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (197.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 206.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 08:58:25 +0000
+
+
+Started GET "/" for ::1 at 2015-11-18 08:59:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "month_ideas"
+  [1m[36mIdea Load (0.1ms)[0m  [1mSELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1[0m  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `picture' for nil:NilClass):
+    31:             <% else %>
+    32:             <div class="item">
+    33:             <% end %>
+    34:               <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
+    35:                 <div class="carousel-caption">
+    36:                   <h2 id="scrolling_text">Mais Votada:
+    37:                     <%= @most_voted_idea.title %></h2>
+  app/views/welcome/index.html.erb:34:in `_app_views_welcome_index_html_erb__3790914278023657941_70210119480800'
+
+
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.1ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.4ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 08:59:45 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.4ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `new_topic_path' for #<#<Class:0x007fb62b0a8a00>:0x007fb6241759f8>):
+    28:           </div>
+    29:         <div class="btn-group btn-group-sm">
+    30:           <div class="text-left">
+    31:             <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
+    32:           </div>
+    33:           <%= form_for :idea, url: approve_approve_idea_path(idea), method: :post do |f|  %>
+    34:             <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
+  app/views/approve_ideas/index.html.erb:31:in `block in _app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+  app/views/approve_ideas/index.html.erb:4:in `_app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+
+
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.6ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:02:00 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.4ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (24.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (undefined local variable or method `new_topic_path' for #<#<Class:0x007fb62999f750>:0x007fb62999e8a0>):
+    28:           </div>
+    29:         <div class="btn-group btn-group-sm">
+    30:           <div class="text-left">
+    31:             <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
+    32:           </div>
+    33:           <%= form_for :idea, url: approve_approve_idea_path(idea), method: :post do |f|  %>
+    34:             <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
+  app/views/approve_ideas/index.html.erb:31:in `block in _app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+  app/views/approve_ideas/index.html.erb:4:in `_app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+
+
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.1ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (109.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-18 09:02:02 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ideas"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "month_ideas"[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT  *,(upvotes - downvotes) as racio FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY racio DESC LIMIT 1  [["approved", "t"]]
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `picture' for nil:NilClass):
+    31:             <% else %>
+    32:             <div class="item">
+    33:             <% end %>
+    34:               <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
+    35:                 <div class="carousel-caption">
+    36:                   <h2 id="scrolling_text">Mais Votada:
+    37:                     <%= @most_voted_idea.title %></h2>
+  app/views/welcome/index.html.erb:34:in `_app_views_welcome_index_html_erb__3790914278023657941_70210119480800'
+
+
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.5ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (112.3ms)
+
+
+Started GET "/ideas" for ::1 at 2015-11-18 09:08:03 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (1.1ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (208.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 226ms (Views: 221.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:08:07 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.4ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined local variable or method `new_topic_path' for #<#<Class:0x007fb6298e8ed8>:0x007fb6298e8230>):
+    28:           </div>
+    29:         <div class="btn-group btn-group-sm">
+    30:           <div class="text-left">
+    31:             <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
+    32:           </div>
+    33:           <%= form_for :idea, url: approve_approve_idea_path(idea), method: :post do |f|  %>
+    34:             <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
+  app/views/approve_ideas/index.html.erb:31:in `block in _app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+  app/views/approve_ideas/index.html.erb:4:in `_app_views_approve_ideas_index_html_erb___1425210600152041766_70210134365700'
+
+
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.6ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.3ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/joanabeleza/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.9ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:12:26 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.4ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "f"]]
+  [1m[35mTopic Load (6.7ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY "topics"."name" ASC
+  Rendered approve_ideas/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_header.html.erb (190.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 231ms (Views: 217.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:12:26 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:12:27 +0000
+
+
+Started POST "/topics/new" for ::1 at 2015-11-18 09:12:53 +0000
+Processing by TopicsController#new as HTML
+  Parameters: {"authenticity_token"=>"YJZPhFfxOmVn9g/9bXp98FxIOFtdMX6rMaNEQJWd1T9jif4WonlcHNU28hVhzJCdrnqdAnSJLsc4ITE7WIVQxA==", "id"=>"new"}
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  Rendered topics/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (201.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 215ms (Views: 210.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:12:53 +0000
+
+
+Started POST "/topics" for ::1 at 2015-11-18 09:13:42 +0000
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WAoi4w02wnRK1ov3+LWZFlpZir/XicgUrdVLBYuYkJRbFZNx+L6kDfgWdh/0A3R7qGsv5v4xmHikVz5+RoAVbw==", "topic"=>{"name"=>"Água", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fb62bb35018 @tempfile=#<Tempfile:/var/folders/v2/l4rv9v9d3nbf8m93mw8wmqwc0000gn/T/RackMultipart20151118-20137-1ki3um.jpg>, @original_filename="gota2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[picture]\"; filename=\"gota2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submeter"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("name", "picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Água"], ["picture", "#<ActionDispatch::Http::UploadedFile:0x007fb62bb35018>"], ["created_at", "2015-11-18 09:13:42.364300"], ["updated_at", "2015-11-18 09:13:42.364300"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/approve_ideas
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:13:42 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.3ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "f"]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY "topics"."name" ASC[0m
+  Rendered approve_ideas/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (207.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 217.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:13:42 +0000
+
+
+Started POST "/approve_ideas/1/approve" for ::1 at 2015-11-18 09:13:50 +0000
+Processing by ApproveIdeasController#approve as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8kcnnG7NXP7cHA4zOFvM7yPYh1+vFu7o2AnNvKULOS7xWJYOm0U6h27c89s07SGC0eoiBoauvoTRi7jHaBO81Q==", "idea"=>{"topic_id"=>"1"}, "commit"=>"Aprovar", "id"=>"1"}
+  [1m[35mIdea Load (0.2ms)[0m  SELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "ideas" SET "approved" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3  [["approved", "t"], ["updated_at", "2015-11-18 09:13:50.104772"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "ideas" SET "topic_id" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["topic_id", 1], ["updated_at", "2015-11-18 09:13:50.109362"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/approve_ideas
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/approve_ideas" for ::1 at 2015-11-18 09:13:50 +0000
+Processing by ApproveIdeasController#index as HTML
+  Rendered layouts/_admin_header.html.erb (0.4ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "f"]]
+  Rendered approve_ideas/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (202.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 211ms (Views: 209.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:13:50 +0000
+
+
+Started GET "/ideas" for ::1 at 2015-11-18 09:13:54 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC  [["approved", "t"]]
+  Rendered ideas/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (193.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 206ms (Views: 204.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:13:54 +0000
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:13:54 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (202.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 404 Not Found in 251ms (Views: 250.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2015-11-18 09:13:54 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (191.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 404 Not Found in 237ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.svg" for ::1 at 2015-11-18 09:13:55 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (208.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 254ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for ::1 at 2015-11-18 09:20:16 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.7ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_header.html.erb (192.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 219ms (Views: 217.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:20:16 +0000
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:20:16 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (201.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 253ms (Views: 252.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2015-11-18 09:20:17 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (187.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 233ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.svg" for ::1 at 2015-11-18 09:20:17 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (210.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 260ms (Views: 260.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for ::1 at 2015-11-18 09:20:35 +0000
+Processing by IdeasController#index as HTML
+  Rendered layouts/_pt_header.html.erb (0.6ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."approved" = $1  ORDER BY created_at DESC[0m  [["approved", "t"]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (199.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 212ms (Views: 210.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.self-4456b19038af477dc1a51cd6b29f73b44667244840a92c421052a3c6bda7b128.css?body=1" for ::1 at 2015-11-18 09:20:35 +0000
+
+
+Started GET "/assets/approve_ideas.self-a0b30ca9fdfcfd22ff27f3283c7189ae07d8a7f0b90de2a217c03cea1a0eb48f.css?body=1" for ::1 at 2015-11-18 09:20:35 +0000
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:35 +0000
+
+
+Started GET "/assets/bootstrap.self-90db4b382953a7cf7b5e458478bd02104e0136813b871030bafe274f308eea83.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/concretize_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap.min.self-b5e9b320bd103676670c826a23239a86169949b9b5a0bf2f9e8158e7a65950a3.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/counter/counter.self-629386082c254387786dfb828b40e39c957369708c0f2427c5cc03cd847829dd.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/month_idea.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/application.self-425fa7e065a7975c45c4df1a9a38136f0bfe2975a16227c1b8e999907e91e61f.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/ideas.self-93bf96e0fa076485ff2576fe4c60d10cf16dab891812377e20669cc0b7d18651.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/received_contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/welcome.self-6a02f276320583401a12b1256ac4b9f461b468804c2d36a4f92219d807e2eee0.css?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap.self-6799543df5db68d89be87d27e42d12cf99bf6a3f7cdb704e9bc4e50e8ad61ceb.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/concretize_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/counter.self-b175ca955a0fecfdad9aa833eaeb2a393d814a57dae232a51f7d12945a60e559.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/received_contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/approve_ideas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/idea_lab.self-1058ceff2ee1da820fc5e2ae2ee6d5fddd6a5ddfe1dfeaca991c44330f4d49c9.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/month_idea.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/application.self-44c454e4e225a0e41341a3b31f0bd6429d3a19d5164936162a15717dcf1de58a.js?body=1" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/bg.jpg" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:20:36 +0000
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2015-11-18 09:20:36 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (201.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 404 Not Found in 250ms (Views: 249.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2015-11-18 09:20:36 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (196.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 239ms (Views: 238.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.svg" for ::1 at 2015-11-18 09:20:36 +0000
+Processing by ApplicationController#not_found as 
+  Parameters: {"unmatched_route"=>"fonts/glyphicons-halflings-regular"}
+  Rendered public/404.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (204.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 404 Not Found in 251ms (Views: 250.0ms | ActiveRecord: 0.0ms)

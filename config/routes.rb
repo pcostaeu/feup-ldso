@@ -1,25 +1,11 @@
 Rails.application.routes.draw do
-  get 'concretize_idea/index'
-
-  get 'concretize_idea/create'
-
-  get 'concretize_idea/destroy'
-
-  get 'concretize_idea/update'
-
-  get 'topics/index'
-
-  get 'topics/new'
-
-  get 'topics/create'
-
-  get 'welcome/index'
 
   resources :ideas
   resources :contacts
   resources :month_ideas
   resources :approve_ideas
   resources :received_contacts
+  resources :topics
 
   root 'welcome#index'
 
@@ -57,9 +43,16 @@ Rails.application.routes.draw do
       post :delete
     end
   end
+
   resources :month_ideas do
     member do
       post :select
+    end
+  end
+
+  resources :topics do
+    member do
+      post :new
     end
   end
 
