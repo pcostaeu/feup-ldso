@@ -11,13 +11,22 @@
   </div>
 
   <div class="row">
-    <div class="box">
-      <%= button_to ideas_path, :method => "get", name:"crescente", class:"btn btn-primary btn-md col-md-6 ordenacao" do%>
-      <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes">Crescente</span>
-      <% end %>
-      <%= button_to ideas_path, :method => "get", name:"decrescente", class:"btn btn-primary btn-md col-md-6 ordenacao" do%>
-      <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes-alt">Decrescente</span>
-      <% end %>
+      <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ordenar por: <span class="caret"></span>
+             </button>
+          <ul class="dropdown-menu">
+        <li> <%= button_to ideas_path, :method => "get", name:"crescente", class:"btn btn-md" do%>
+            <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes">Crescente</span>
+            <% end %></li>
+        <li>  <%= button_to ideas_path, :method => "get", name:"decrescente", class:"btn btn-md" do%>
+            <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes-alt">Decrescente</span>
+            <% end %></li>
+              <li role="separator" class="divider"></li>
+              <li>ordendar por tempo aqui</li>
+          </ul>
+      </div>
+    <div class="box">     
       <% @ideas.each do |idea| %>
       <div class="col-lg-12 text-center">
         <h2>[<%= idea.topic.name %>]
