@@ -10,14 +10,30 @@
     <br>
   </div>
 
+  <% if @ideas.size != 0 %>
   <div class="row">
     <div class="box">
-      <%= button_to ideas_path, :method => "get", name:"crescente", class:"btn btn-primary btn-md col-md-6 ordenacao" do%>
-      <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes">Crescente</span>
-      <% end %>
-      <%= button_to ideas_path, :method => "get", name:"decrescente", class:"btn btn-primary btn-md col-md-6 ordenacao" do%>
-      <span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes-alt">Decrescente</span>
-      <% end %>
+
+      <div class="dropdown" style="float:right;">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Ordenação
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <%= link_to "Votos Crescente", ideas_path(:order => "crescente") %>
+          </li>
+          <li>
+            <%= link_to "Votos Decrescente", ideas_path(:order => "decrescente")%>
+          </li>
+          <li>
+            <%= link_to "Mais Recente", ideas_path(:order => "newer")%>
+          </li>
+          <li>
+            <%= link_to "Mais Antiga", ideas_path(:order => "older")%>
+          </li>
+        </ul>
+      </div>
+
       <% @ideas.each do |idea| %>
       <div class="col-lg-12 text-center">
         <h2>[<%= idea.topic.name %>]
@@ -34,29 +50,36 @@
           <% end %>
         </div>
         <p><%= idea.text %></p>
-      </div>
-      <div class="inline text-center">
-        <div class="btn-group btn-group-sm">
-          <%= button_to 'Gostei da ideia', upvote_idea_path(idea), method: :post, role:"button" ,class:"a btn btn-default" %>
-          <%= button_to 'Não gostei da ideia', downvote_idea_path(idea), method: :post,role:"button" , class:"a btn btn-default" %>
+        <div class="col-lg-12 inline text-center">
+          <div class="btn-group btn-group-sm">
+            <%= button_to upvote_idea_path(idea), method: :post, role:"button" ,class:"a btn btn-default" do%>
+            <span aria-hidden="true" class="glyphicon glyphicon-thumbs-up">
+              Gostei</span>
+            <% end %>
+            <%= button_to downvote_idea_path(idea), method: :post,role:"button" , class:"a btn btn-default" do%>
+            <span aria-hidden="true" class="glyphicon glyphicon-thumbs-down">
+              Não gostei</span>
+            <% end %>
+          </div>
+          <table id="votes">
+            <tr>
+              <td>
+                <h5>Votação:
+                </h5>
+              </td>
+              <td>
+                <h4 id="upvote">+<%= idea.upvotes %></h4>
+              </td>
+              <td>
+                <h4 id="downvote">-<%= idea.downvotes %></h4>
+              </td>
+            </tr>
+          </table>
+          <hr>
         </div>
-        <table id="votes">
-          <tr>
-            <td>
-              <h5>Votação:
-              </h5>
-            </td>
-            <td>
-              <h4 id="upvote">+<%= idea.upvotes %></h4>
-            </td>
-            <td>
-              <h4 id="downvote">-<%= idea.downvotes %></h4>
-            </td>
-          </tr>
-        </table>
-        <hr>
       </div>
       <% end %>
     </div>
   </div>
+  <% end %>
 </div>

@@ -5,11 +5,17 @@ class IdeasController < ApplicationController
     else
       @ideas = Idea.where(approved: true).order('created_at DESC')
     end
-    if params[:crescente]
+    if params[:order] == "crescente"
       @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio ASC')
     end
-    if params[:decrescente]
+    if params[:order] == "decrescente"
       @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC')
+    end
+    if params[:order] == "newer"
+      @ideas = Idea.where(approved: true).order('created_at DESC')
+    end
+    if params[:order] == "older"
+      @ideas = Idea.where(approved: true).order('created_at ASC')
     end
   end
 
@@ -18,6 +24,7 @@ class IdeasController < ApplicationController
   end
 
   def new
+    @idea = Idea.new
   end
 
   def upvote
@@ -36,8 +43,11 @@ class IdeasController < ApplicationController
     @idea = Idea.new(idea_params)
     @idea.date = Time.zone.now.to_date
     @idea.approved = false
-    @idea.save
-    redirect_to @idea
+    if @idea.save
+      redirect_to @idea
+    else
+      render 'new'
+    end
   end
 
   def cancel

@@ -25,6 +25,15 @@
     <%= f.label :message, "Mensagem" %>
     <%= f.text_area :message, :style => 'resize: vertical;', :type => 'text', :class => 'form-control', :rows => '6' %>
   </div>
+    <div class="form-group col-lg-12">
+  <% if @idea.try(:errors).try(:any?) %>
+    <% @idea.errors.each do |attribute, error| %>
+      <ul>
+        <li><small class="text-danger"> <%= error %> </small></li>
+      </ul>
+    <% end %>
+  <% end %>
+    </div>
   <div class="form-group col-lg-12">
     <%= f.submit "Submeter", :class => 'btn btn-default' %>
   </div>

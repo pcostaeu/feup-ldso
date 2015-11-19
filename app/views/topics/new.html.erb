@@ -21,6 +21,10 @@
             </div>
           </div>
           <div class="form-group col-lg-12">
+            <% if @topic.errors.any? %>
+              <p><%= @topic.errors[:picture].first %></p>
+              <p><%= @topic.errors[:name].first %></p>
+            <% end %>
             <%= f.submit "Submeter", :class => 'btn btn-default' %>
           </div>
         </div>

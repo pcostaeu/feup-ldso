@@ -2,12 +2,19 @@ class ContactsController < ApplicationController
   def index
   end
 
+  def new
+    @contact = Contact.new
+  end
+
   def create
     @contact = Contact.new(contact_params)
     @contact.date = Time.zone.now.to_date
     @contact.seen = false
-    @contact.save
-    redirect_to (contacts_path)
+    if @contact.save
+      redirect_to (contacts_path)
+    else
+      render 'index'
+    end
   end
 
   private
