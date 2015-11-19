@@ -1,16 +1,12 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.btn-group form {
-    display: inline;
+
+div.btn-group form{
+  display: inline;
 }
 
-#ideas > div:nth-child(2) > div.btn-group.open > ul > li:nth-child(1) > form > button {
-    border-style: none;
-    background-color: white;
-}
-
-#ideas > div:nth-child(2) > div.btn-group.open > ul > li:nth-child(2) > form > button {
-    border-style: none;
-    background-color: white;
+.ordenacao
+{
+    top:-6rem; //isto tem que ficar em percentagem. em mobile fica mal!
 }
