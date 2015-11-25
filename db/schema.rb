@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116151747) do
+ActiveRecord::Schema.define(version: 20151125150421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "concretize_ideas", force: :cascade do |t|
-    t.integer  "ideia_id"
+    t.integer  "idea_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

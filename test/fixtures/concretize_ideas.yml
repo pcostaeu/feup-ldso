@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ideia_id: 1
+  idea_id: 1
 
 two:
-  ideia_id: 1
+  idea_id: 1
