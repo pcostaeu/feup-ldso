@@ -34,6 +34,7 @@ class IdeasController < ApplicationController
   def upvote
     @idea = Idea.find(params[:id])
     @idea.increment!(:upvotes)
+    cookies[params[:id]] = { :value => "voted", :expires => 7.day.from_now }
     redirect_to :back
   end
 
