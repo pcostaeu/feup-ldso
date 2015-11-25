@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :ideas
   resources :contacts
   resources :month_ideas
+  resources :concretize_ideas
   resources :approve_ideas
   resources :received_contacts
   resources :topics
@@ -45,6 +46,12 @@ Rails.application.routes.draw do
   end
 
   resources :month_ideas do
+    member do
+      post :select
+    end
+  end
+    
+ resources :concretize_ideas do
     member do
       post :select
     end
