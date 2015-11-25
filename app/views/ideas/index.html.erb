@@ -33,6 +33,18 @@
           </li>
         </ul>
       </div>
+      <div class="dropdown" style="float:right;">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Categoria
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <% @topics.each do |topic| %>
+          <li>
+            <%= link_to topic.name, ideas_path(:order => "by_topic", :id_topic => topic.id)%>
+          </li>
+          <% end %>
+        </ul>
+      </div>
 
       <% @ideas.each do |idea| %>
       <div class="col-lg-12 text-center">

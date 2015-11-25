@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   def index
+      @topics = Topic.all
     if params[:search] && !params[:search].blank?
       @ideas = Idea.search(params[:search]).order('created_at DESC')
     else
@@ -16,6 +17,9 @@ class IdeasController < ApplicationController
     end
     if params[:order] == "older"
       @ideas = Idea.where(approved: true).order('created_at ASC')
+    end
+    if params[:order] == "by_topic"
+      @ideas = Idea.where(topic_id: params[:id_topic]).order('created_at DESC')
     end
   end
 
