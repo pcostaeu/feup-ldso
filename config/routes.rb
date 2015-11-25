@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'concretize_ideas/index'
+
   resources :ideas
   resources :contacts
   resources :month_ideas
