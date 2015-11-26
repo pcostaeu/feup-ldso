@@ -63,13 +63,13 @@
         </div>
         <p><%= idea.text %></p>
         <div class="col-lg-12 inline text-center">
-          <div class="btn-group btn-group-sm">
+          <div id=voteButtons<%= idea.id %> class="btn-group btn-group-sm">
             <% if cookies[idea.id].blank? %>
-            <%= button_to upvote_idea_path(idea), method: :post, role:"button" ,class:"a btn btn-default" do%>
+            <%= button_to upvote_idea_path(idea), method: :post, remote: true,onclick: "hidevote(#{idea.id})", role:"button" ,class:"a btn btn-default" do%>
             <span aria-hidden="true" class="glyphicon glyphicon-thumbs-up">
               Gostei</span>
             <% end %>
-            <%= button_to downvote_idea_path(idea), method: :post,role:"button" , class:"a btn btn-default" do%>
+            <%= button_to downvote_idea_path(idea), method: :post,remote: true,onclick: "hidevote(#{idea.id})", role:"button" , class:"a btn btn-default" do%>
             <span aria-hidden="true" class="glyphicon glyphicon-thumbs-down">
               Não gostei</span>
             <% end %>

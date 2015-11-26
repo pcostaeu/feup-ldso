@@ -4,13 +4,14 @@ class ApproveIdeasController < ApplicationController
   end
 
   def approve
-    if !params[:topic_id].blank?
       @idea = Idea.find(params[:id])
       @idea.update_attribute(:approved, true)
       @idea.update_attributes(user_params)
       @idea.save
-    end
-    redirect_to :back
+
+    respond_to do |format|
+    format.js { render :js => "merda("+params[:id]+");" } #this is the second time format.js has been called in this controller!
+  end
   end
 
   def delete

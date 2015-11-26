@@ -36,6 +36,10 @@ $(function() {
   });
 });
 
-function topic () {
-  alert("Não foi escolhida uma categoria!");
+function hidevote(id) {
+document.getElementById('voteButtons'+id).style.visibility = "hidden";
+}
+function merda(id) {
+alert("Ideia Aprovada ");
+document.getElementById('idea'+id).innerHTML = "<h1>Aprovada</h1>";
 }
