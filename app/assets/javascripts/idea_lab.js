@@ -35,3 +35,7 @@ $(function() {
     }
   });
 });
+
+function topic () {
+  alert("Não foi escolhida uma categoria!");
+}

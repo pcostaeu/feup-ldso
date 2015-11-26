@@ -7,6 +7,6 @@ class WelcomeController < ApplicationController
     else
       @month_idea = false
     end
-    @most_voted_idea = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC').first
+    @most_voted_idea = Idea.where(approved: true).select('*,(upvotes - downvotes) as racio').order('racio DESC').first
   end
 end

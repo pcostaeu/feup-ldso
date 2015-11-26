@@ -1,6 +1,5 @@
 <%= render "layouts/admin_header" %>
 
-
 <div class="container" id="ideas">
   <% @ideas.each do |idea| %>
   <div class="row">
@@ -9,33 +8,31 @@
         <h2><%= idea.title %><br>
           <small><%= idea.date %></small>
         </h2>
+        <% if idea.picture? %>
         <div class="col-xs-12 col-sm-12 col-md-4">
-          <% if idea.picture? %>
-          <img class="img-responsive img-border img-full" alt="Imagem não disponível" src=<%=idea.picture.url%> >
-          <% end %>
+          <img alt="Imagem não disponível" class="img-responsive img-border img-full" src=<%=idea.picture.url%>
         </div>
+        <% end %>
         <p><%= idea.text %></p>
       </div>
       <div class="col-lg-12">
-        <div class="col-lg-6">
+        <div class="col-md-4">
           <h3>Autor:
             <small>
               <%= idea.author %>
             </small>
           </h3>
         </div>
-        <div class="col-lg-3">
+        <div class="col-md-4">
           <h3>Data:
             <small>
               <%= idea.date %>
             </small>
           </h3>
         </div>
-        <div class="btn-group btn-group-sm botoes col-lg-3">
-            <%= button_to 'Selecionar ideia do mês', select_month_idea_path(idea), method: :post, role:"button" ,class:"btn btn-success" %>
-        </div>
-          <div class="btn-group btn-group-sm botoes col-lg-3">
-              <%= button_to 'Concretizar ideia', select_concretize_idea_path(idea), method: :post, role:"button" ,class:"btn btn-success" %>
+        <div class="btn-group btn-group-sm botoes col-md-4">
+          <%= button_to 'Destacar ideia', select_month_idea_path(idea), method: :post, role:"button" ,class:"btn btn-success" %>
+          <%= button_to 'Finalizar ideia', select_concretize_idea_path(idea), method: :post, role:"button" ,class:"btn btn-success" %>
         </div>
       </div>
     </div>

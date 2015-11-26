@@ -1,6 +1,6 @@
 class MonthIdeasController < ApplicationController
   def index
-    @ideas = Idea.search_by_month(Time.zone.now.to_date.month).order('created_at DESC')
+    @ideas = Idea.search_by_month(Time.zone.now.to_date.month).where(approved: true).order('created_at DESC')
   end
 
   def new

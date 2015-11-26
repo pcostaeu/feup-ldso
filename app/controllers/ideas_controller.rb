@@ -50,8 +50,6 @@ class IdeasController < ApplicationController
     @idea.approved = false
     if @idea.save
       redirect_to @idea
-    else
-      render 'new'
     end
   end
 

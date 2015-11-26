@@ -8,34 +8,34 @@
         <h2><%= idea.title %><br>
           <small><%= idea.date %></small>
         </h2>
-          <% if idea.picture? %>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <img class="img-responsive img-border img-full" alt="Imagem não disponível" src=<%=idea.picture.url%>>
-            </div>
-          <% end %>
+        <% if idea.picture? %>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <img alt="Imagem não disponível" class="img-responsive img-border img-full" src=<%=idea.picture.url%>>
+        </div>
+        <% end %>
         <p><%= idea.text %></p>
       </div>
-    <div class="inline text-center">
-      <div class="col-xs-12 col-sm-12 col-md-4">
-            <h4>Data:
-            <small> <%= idea.date %></small>
-            </h4>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <h4>Autor:
-            <small> <%= idea.author %></small>
-            </h4>
-          </div>
+      <div class="inline">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <h4>Autor:
+            <small>
+              <%= idea.author %></small>
+          </h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <h4>Data:
+            <small>
+              <%= idea.date %></small>
+          </h4>
+        </div>
         <div class="btn-group btn-group-sm">
           <div class="text-left">
             <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
           </div>
           <%= form_for :idea, url: approve_approve_idea_path(idea), method: :post do |f|  %>
-            <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
-
+          <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
           <%= f.submit 'Aprovar', role:"button" ,class:"btn btn-success" %>
-        <%end%>
-
+          <%end%>
           <%= button_to 'Rejeitar', delete_approve_idea_path(idea), method: :post, role:"button" , class:"btn btn-danger" %>
         </div>
       </div>

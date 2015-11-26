@@ -4,10 +4,12 @@ class ApproveIdeasController < ApplicationController
   end
 
   def approve
-    @idea = Idea.find(params[:id])
-    @idea.update_attribute(:approved, true)
-    @idea.update_attributes(user_params)
-    @idea.save
+    if !params[:topic_id].blank?
+      @idea = Idea.find(params[:id])
+      @idea.update_attribute(:approved, true)
+      @idea.update_attributes(user_params)
+      @idea.save
+    end
     redirect_to :back
   end
 
@@ -17,7 +19,8 @@ class ApproveIdeasController < ApplicationController
     redirect_to :back
   end
 
-private
+  private
+
   def user_params
     params.require(:idea).permit(:topic_id)
   end
