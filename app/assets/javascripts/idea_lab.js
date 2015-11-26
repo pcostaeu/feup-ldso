@@ -36,10 +36,33 @@ $(function() {
   });
 });
 
-function hidevote(id) {
+function hide_when_upvote(id) {
+//esconder botoes
 document.getElementById('voteButtons'+id).style.visibility = "hidden";
+//atualizar numero de votos automaticamente
+var upvotes = document.getElementById('upvote'+id).innerHTML;
+upvotes = upvotes.substring(1, upvotes.length);
+upvotes = Number(upvotes);
+upvotes = upvotes + 1;
+document.getElementById('upvote'+id).innerHTML = "+"+upvotes;
+
 }
-function merda(id) {
+function hide_when_downvote(id) {
+//esconder botoes
+document.getElementById('voteButtons'+id).style.visibility = "hidden";
+//atualizar numero de votos automaticamente
+
+var downvotes = document.getElementById('downvote'+id).innerHTML;
+downvotes = downvotes.substring(1, downvotes.length);
+downvotes = Number(downvotes);
+downvotes = downvotes + 1;
+document.getElementById('downvote'+id).innerHTML = "-"+downvotes;
+
+
+}
+function hide_approved_idea(id) {
 alert("Ideia Aprovada ");
-document.getElementById('idea'+id).innerHTML = "<h1>Aprovada</h1>";
+document.getElementById('idea'+id).innerHTML = "<h2>Aprovada</h2>"
+document.getElementById('idea'+id).style.color = "green";
+
 }

@@ -10,7 +10,7 @@ class ApproveIdeasController < ApplicationController
       @idea.save
 
     respond_to do |format|
-    format.js { render :js => "merda("+params[:id]+");" } #this is the second time format.js has been called in this controller!
+    format.js { render :js => "hide_approved_idea("+params[:id]+");" } #this is the second time format.js has been called in this controller!
   end
   end
 

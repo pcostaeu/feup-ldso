@@ -35,13 +35,18 @@ class IdeasController < ApplicationController
     @idea = Idea.find(params[:id])
     @idea.increment!(:upvotes)
     cookies[params[:id]] = { :value => "voted", :expires => 7.day.from_now }
-    redirect_to :back
+    respond_to do |format|
+    format.js { render :js => "hide_when_upvote("+params[:id]+");" } #this is the second time format.js has been called in this controller!
+  end
   end
 
   def downvote
     @idea = Idea.find(params[:id])
     @idea.increment!(:downvotes)
-    redirect_to :back
+    cookies[params[:id]] = { :value => "voted", :expires => 7.day.from_now }
+    respond_to do |format|
+    format.js { render :js => "hide_when_downvote("+params[:id]+");" } #this is the second time format.js has been called in this controller!
+  end
     end
 
   def create
