@@ -33,7 +33,7 @@
             <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
           </div>
           <%= form_for :idea, url: approve_approve_idea_path(idea), method: :post do |f|  %>
-          <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle'} %>
+          <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle', :required =>true} %>
           <%= f.submit 'Aprovar', role:"button" ,class:"btn btn-success" %>
           <%end%>
           <%= button_to 'Rejeitar', delete_approve_idea_path(idea), method: :post, role:"button" , class:"btn btn-danger" %>
