@@ -52,7 +52,7 @@ Rails.application.routes.draw do
       post :select
     end
   end
-    
+
  resources :concretize_ideas do
     member do
       post :select
@@ -62,6 +62,18 @@ Rails.application.routes.draw do
   resources :topics do
     member do
       post :new
+    end
+  end
+
+  resources :received_contacts do
+    member do
+      post :read
+    end
+  end
+
+  resources :received_contacts do
+    member do
+      post :delete
     end
   end
 
