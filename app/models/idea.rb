@@ -12,4 +12,7 @@ class Idea < ActiveRecord::Base
     def self.search_by_month(month)
         where('extract(month from created_at) = ? ', month)
     end
+    def self.not_concretize()
+        joins('LEFT JOIN "concretize_ideas" ON "ideas"."id" = "concretize_ideas"."idea_id"').where('"concretize_ideas"."idea_id" is null')
+    end
 end
