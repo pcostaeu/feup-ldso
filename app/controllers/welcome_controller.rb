@@ -1,12 +1,11 @@
 class WelcomeController < ApplicationController
   def index
-    @has_ideas = Idea.all.size
-
-    if(MonthIdea.all.size != 0)
-      @month_idea = Idea.find(MonthIdea.last.idea_id)
-    else
-      @month_idea = false
+    @has_ideas = Idea.where(winner: true).size
+    @counter = 1
+    if(@has_ideas != 0)
+      @ideas = Idea.where(winner: true).order('created_at DESC').limit(5)
+      @first_idea = @ideas.first
+      @ideas = @ideas.drop(1)
     end
-    @most_voted_idea = Idea.where(approved: true).select('*,(upvotes - downvotes) as racio').order('racio DESC').first
   end
 end

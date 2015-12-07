@@ -5,64 +5,42 @@
   <div class="row">
     <div class="box">
       <div class="col-lg-12 text-center">
+        <% if @has_ideas != 0 %>
         <div class="carousel slide" id="carousel-example-generic">
           <!-- Indicators -->
-          <% if @has_ideas != 0 %>
           <ol class="carousel-indicators hidden-xs">
             <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
-            <% if (@month_idea != false) %>
-            <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+            <% @ideas.each do |idea| %>
+            <li data-slide-to=<%= @counter %> data-target="#carousel-example-generic"></li>
+            <% @counter = @counter + 1 %>
             <% end %>
           </ol>
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-            <% if @month_idea != false %>
             <div class="item active">
-              <a href=ideas/#idea<%=@month_idea.id %> >
-                <% if @month_idea.picture? %>
-                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @month_idea.picture.url%>)">
-                  <div class="carousel-caption">
-                    <h2>Ideia em destaque:
-                      <%= @month_idea.title%></h2>
-                  </div>
+              <% if @first_idea.picture? %>
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
+              <% else %>
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.topic.picture.url%>)">
+              <% end %>
+                <div class="carousel-caption">
+                  <h2><%= @first_idea.title%></h2>
                 </div>
-                <% else %>
-                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @month_idea.topic.picture.url%>)">
-                  <div class="carousel-caption">
-                    <h2>Ideia em destaque:
-                      <%= @month_idea.title%></h2>
+              </div>
+              </div>
+              <% @ideas.each do |idea| %>
+              <div class="item">
+                <% if idea.picture? %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.picture.url%>)">
+                  <% else %>
+                  <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.topic.picture.url%>)">
+                    <% end %>
+                    <div class="carousel-caption">
+                      <h2><%= idea.title%></h2>
+                    </div>
                   </div>
                 </div>
                 <% end %>
-              </a>
-            </div>
-            <% end %>
-            <% if @month_idea == false %>
-            <div class="item active">
-              <a href=ideas/#idea<%=@most_voted_idea.id %> >
-                <% else %>
-                <div class="item">
-                  <a href=ideas/#idea<%=@most_voted_idea.id %> >
-                    <% end %>
-                    <% if @most_voted_idea != nil %>
-                    <% if @most_voted_idea.picture? %>
-                    <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.picture.url %>)">
-                      <div class="carousel-caption">
-                        <h2>Mais Votada:
-                          <%= @most_voted_idea.title %></h2>
-                      </div>
-                    </div>
-                    <% else %>
-                    <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @most_voted_idea.topic.picture.url %>)">
-                      <div class="carousel-caption">
-                        <h2>Mais Votada:
-                          <%= @most_voted_idea.title %></h2>
-                      </div>
-                    </div>
-                    <% end %>
-                  </a>
-                  <% end %>
-                </div>
               </div>
               <!-- Controls -->
               <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic">

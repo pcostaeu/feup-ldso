@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125150421) do
+ActiveRecord::Schema.define(version: 20151111165736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "concretize_ideas", force: :cascade do |t|
-    t.integer  "idea_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -36,25 +30,15 @@ ActiveRecord::Schema.define(version: 20151125150421) do
   create_table "ideas", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.integer  "upvotes",    default: 0
-    t.integer  "downvotes",  default: 0
     t.integer  "topic_id"
-    t.boolean  "approved"
     t.date     "date"
     t.string   "author"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.boolean  "winner",     default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "email"
     t.string   "picture"
   end
-
-  create_table "month_ideas", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "idea_id"
-  end
-
-  add_index "month_ideas", ["idea_id"], name: "index_month_ideas_on_idea_id", using: :btree
 
   create_table "topics", force: :cascade do |t|
     t.string   "name"

@@ -12,7 +12,7 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
-      redirect_to approve_ideas_path
+      redirect_to manage_ideas_path
     else
       render 'new'
     end

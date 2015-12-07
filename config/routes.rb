@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'concretize_ideas/index'
-
   resources :ideas
   resources :contacts
-  resources :month_ideas
-  resources :concretize_ideas
-  resources :approve_ideas
+  resources :manage_ideas
   resources :received_contacts
   resources :topics
 
@@ -19,43 +15,7 @@ Rails.application.routes.draw do
 
   resources :ideas do
     member do
-      post :upvote
-    end
-  end
-
-  resources :ideas do
-    member do
-      post :downvote
-    end
-  end
-
-  resources :ideas do
-    member do
       post :cancel
-    end
-  end
-
-  resources :approve_ideas do
-    member do
-      post :approve
-    end
-  end
-
-  resources :approve_ideas do
-    member do
-      post :delete
-    end
-  end
-
-  resources :month_ideas do
-    member do
-      post :select
-    end
-  end
-
- resources :concretize_ideas do
-    member do
-      post :select
     end
   end
 
@@ -74,6 +34,18 @@ Rails.application.routes.draw do
   resources :received_contacts do
     member do
       post :delete
+    end
+  end
+
+  resources :manage_ideas do
+    member do
+      post :delete
+    end
+  end
+
+  resources :manage_ideas do
+    member do
+      post :approve
     end
   end
 

@@ -1,0 +1,2 @@
+module ManageIdeasHelper
+end

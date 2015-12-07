@@ -1,26 +1,6 @@
 class IdeasController < ApplicationController
   def index
-      @topics = Topic.all
-    if params[:search] && !params[:search].blank?
-      @ideas = Idea.search(params[:search]).order('created_at DESC')
-    else
-      @ideas = Idea.where(approved: true).order('created_at DESC')
-    end
-    if params[:order] == "crescente"
-      @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio ASC')
-    end
-    if params[:order] == "decrescente"
-      @ideas = Idea.select('*,(upvotes - downvotes) as racio').where(approved: true).order('racio DESC')
-    end
-    if params[:order] == "newer"
-      @ideas = Idea.where(approved: true).order('created_at DESC')
-    end
-    if params[:order] == "older"
-      @ideas = Idea.where(approved: true).order('created_at ASC')
-    end
-    if params[:order] == "by_topic"
-      @ideas = Idea.where(topic_id: params[:id_topic]).order('created_at DESC')
-    end
+    @ideas = Idea.where(winner: true).order('created_at DESC')
   end
 
   def show
@@ -31,28 +11,9 @@ class IdeasController < ApplicationController
     @idea = Idea.new
   end
 
-  def upvote
-    @idea = Idea.find(params[:id])
-    @idea.increment!(:upvotes)
-    cookies[params[:id]] = { :value => "voted", :expires => 7.day.from_now }
-    respond_to do |format|
-    format.js { render :js => "hide_when_upvote("+params[:id]+");" } #this is the second time format.js has been called in this controller!
-  end
-  end
-
-  def downvote
-    @idea = Idea.find(params[:id])
-    @idea.increment!(:downvotes)
-    cookies[params[:id]] = { :value => "voted", :expires => 7.day.from_now }
-    respond_to do |format|
-    format.js { render :js => "hide_when_downvote("+params[:id]+");" } #this is the second time format.js has been called in this controller!
-  end
-    end
-
   def create
     @idea = Idea.new(idea_params)
     @idea.date = Time.zone.now.to_date
-    @idea.approved = false
     if @idea.save
       redirect_to @idea
     end
@@ -64,10 +25,6 @@ class IdeasController < ApplicationController
     @idea.destroy
     FileUtils.rm_rf(var)
     redirect_to ideas_path
-  end
-
-  def self.search_by_month(month)
-    where('extract(month from created_at) = ? ', month)
   end
 
   private
