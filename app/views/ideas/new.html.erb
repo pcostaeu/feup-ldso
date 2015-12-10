@@ -8,7 +8,7 @@
       <hr>
       <p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tem alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
       <%= form_for :idea, url: ideas_path do |f| %>
-      <div class="row">
+      <div class="row">       
         <div class="form-group col-lg-6">
           <%= f.label :author, "Nome" %>
           <%= f.text_field :author, :class => 'form-control' %>
@@ -17,15 +17,28 @@
           <%= f.label :email, "Email" %>
           <%= f.text_field :email, :class => 'form-control' %>
         </div>
+            <div class="form-group col-lg-6">
+        <button id="participante" type="button" class="btn btn-default btn-md">
+            <span class="icon-stack">
+                <i class="glyphicon glyphicon-plus"></i>
+                <i class="glyphicon glyphicon-user"></i>
+        Adicionar Participante
+          </button>
+         </div>
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
           <%= f.label :title, "Título" %>
           <%= f.text_field :title, :class => 'form-control', :rows => '6', :required => true %>
         </div>
+                 <div class="clearfix"></div>
+        <div class="form-group col-lg-12">
+            <%= f.label :text, "Resumo" %>
+          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :maxlength => 350, :class => 'form-control', :rows => '6', :required => true %>
+        </div>
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
-          <%= f.label :text, "Ideia" %>
-          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :class => 'form-control', :rows => '6', :required => true %>
+            <%= f.label :text, "Descrição da ideia" %>
+          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :maxlength => 3000, :class => 'form-control', :rows => '6', :required => true %>
         </div>
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
@@ -34,6 +47,11 @@
             <%= f.file_field :picture %>
           </div>
         </div>
+           <div class="form-group col-lg-12">                               
+                <h4>Termos e condições</h4>  
+              <p>• Autorizo a divulgação da ideia sem limitações.</p>
+              <p>• Autorizo a divulgação do título, resumo da ideia.</p>              
+        </div> 
         <% if @contact.try(:errors).try(:any?) %>
         <% @contact.errors.each do |attribute, error| %>
         <ul>
@@ -42,8 +60,7 @@
       <% end %>
         <% end %>
         <div class="form-group col-lg-12">
-          <%= f.submit "Submeter", :class => 'btn btn-default' %>
-          <%= f.label :text, " Ao submeter autoriza a divulgação da ideia e do conteúdo." %>
+            <%= f.submit "Aceitar e Submeter", :class => 'btn btn-default', data: { confirm: 'Tem a certeza?' } %>
         </div>
       </div>
       <% end %>
