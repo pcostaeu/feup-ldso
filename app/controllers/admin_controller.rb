@@ -5,6 +5,8 @@ class AdminController < ApplicationController
   end
   def contactsReceived
   end
-  def monthIdea
+  def monthIdea stopPropagation
+
+    
   end
 end
