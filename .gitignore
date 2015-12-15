@@ -17,3 +17,4 @@ log/development.log
 Gemfile.lock
 *.log
 *.jpg
+log/development.log
