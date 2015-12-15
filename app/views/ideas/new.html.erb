@@ -8,14 +8,14 @@
       <hr>
       <p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tem alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
       <%= form_for :idea, url: ideas_path do |f| %>
-      <div class="row">       
+      <div class="row">
         <div class="form-group col-lg-6">
           <%= f.label :author, "Nome" %>
-          <%= f.text_field :author, :class => 'form-control' %>
+          <%= f.text_field :author, :class => 'form-control',  :required => true  %>
         </div>
         <div class="form-group col-lg-6">
           <%= f.label :email, "Email" %>
-          <%= f.text_field :email, :class => 'form-control' %>
+          <%= f.text_field :email, :class => 'form-control' , :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
         </div>
             <div class="form-group col-lg-6">
         <button id="participante" type="button" class="btn btn-default btn-md">
@@ -38,7 +38,7 @@
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
             <%= f.label :text, "Descrição da ideia" %>
-          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :maxlength => 3000, :class => 'form-control', :rows => '6', :required => true %>
+          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :maxlength => 3000, :class => 'form-control', :rows => '6' %>
         </div>
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
@@ -47,11 +47,13 @@
             <%= f.file_field :picture %>
           </div>
         </div>
-           <div class="form-group col-lg-12">                               
-                <h4>Termos e condições</h4>  
-              <p>• Autorizo a divulgação da ideia sem limitações.</p>
-              <p>• Autorizo a divulgação do título, resumo da ideia.</p>              
-        </div> 
+           <div class="form-group col-lg-12">
+                <h5>Termos e condições</h5>
+                <ul>
+              <li>Autorizo a divulgação da ideia sem limitações.</li>
+              <li>Autorizo a divulgação do título, resumo da ideia.</li>
+            </ul>
+        </div>
         <% if @contact.try(:errors).try(:any?) %>
         <% @contact.errors.each do |attribute, error| %>
         <ul>
@@ -60,7 +62,7 @@
       <% end %>
         <% end %>
         <div class="form-group col-lg-12">
-            <%= f.submit "Aceitar e Submeter", :class => 'btn btn-default', data: { confirm: 'Tem a certeza?' } %>
+            <%= f.submit "Aceitar e Submeter", :class => 'btn btn-default', data: { confirm: 'Confirme os dados inseridos. Após a submissão não é possível fazer alterações. Pretende submeter?' } %>
         </div>
       </div>
       <% end %>
