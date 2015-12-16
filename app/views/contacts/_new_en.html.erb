@@ -1,0 +1,45 @@
+<div class="group col-lg-12">
+  <p>If you have Questions please send us an email to
+    <strong>
+      <a href="mailto:sustentabilidade@fe.up.pt">sustentabilidade@fe.up.pt</a>
+    </strong>
+    or use this form.
+  </p>
+</div>
+<div class="text-left">
+  <%= form_for :contact, url: contacts_path do |f| %>
+  <div class="form-group col-lg-6">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, :class => 'form-control' %>
+  </div>
+  <div class="form-group col-lg-6">
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email, :class => 'form-control' %>
+  </div>
+  <div class="form-group col-lg-12">
+    <%= f.label :title, "Subject" %>
+    <%= f.text_field :title, :class => 'form-control' %>
+  </div>
+  <div class="clearfix"></div>
+  <div class="form-group col-lg-12">
+    <%= f.label :message, "Message" %>
+    <%= f.text_area :message, :style => 'resize: vertical;', :type => 'text', :class => 'form-control', :rows => '6' %>
+  </div>
+  <div class="form-group col-lg-12">
+    <% if @contact.try(:errors).try(:any?) %>
+    <% @contact.errors.each do |attribute, error| %>
+    <ul>
+      <li>
+        <small class="text-danger">
+          <%= error %>
+        </small>
+      </li>
+    </ul>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="form-group col-lg-12">
+    <%= f.submit "Submit", :class => 'btn btn-default' %>
+  </div>
+  <% end %>
+</div>

@@ -13,11 +13,6 @@ Rails.application.routes.draw do
   get '/contacts_en' => 'contacts#index_en', as: 'contacts_english'
   get '/admin' => 'admin#login', as: 'login'
 
-  resources :ideas do
-    member do
-      post :cancel
-    end
-  end
 
   resources :topics do
     member do
