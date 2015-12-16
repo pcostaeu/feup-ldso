@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :manage_ideas
   resources :received_contacts
   resources :topics
+  resources :top_ideas
 
   root 'welcome#index'
 
@@ -32,15 +33,21 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :manage_ideas do
+  resources :top_ideas do
     member do
-      post :delete
+      post :remove
     end
   end
+
 
   resources :manage_ideas do
     member do
       post :approve
+    end
+  end
+  resources :manage_ideas do
+    member do
+      post :delete
     end
   end
 

@@ -45,3 +45,9 @@ function hide_deleted_idea(id) {
   document.getElementById('idea' + id).innerHTML = "<h4>Apagado</h4>"
   document.getElementById('idea' + id).style.color = "red";
 }
+
+function hide_remove_top_idea(id) {
+  document.getElementById('idea' + id).innerHTML = "<h4>Removida</h4>"
+  document.getElementById('idea' + id).style.color = "red";
+  document.getElementById('idea' + id).style.float = "right";
+}
