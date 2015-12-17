@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :admins
   resources :ideas
   resources :contacts
   resources :manage_ideas
@@ -7,13 +14,17 @@ Rails.application.routes.draw do
   resources :topics
   resources :top_ideas
 
+  resources :sessions, only: [:new, :create, :destroy]
+   get 'signup', to: 'admins#new', as: 'signup'
+   get 'login', to: 'sessions#new', as: 'login'
+   get 'logout', to: 'sessions#destroy', as: 'logout'
+   resources :admins
+
   root 'welcome#index'
 
   get '/en' => 'welcome#index_en', as: 'english'
   get '/ideas_en' => 'ideas#index_en', as: 'ideas_english'
   get '/contacts_en' => 'contacts#index_en', as: 'contacts_english'
-  get '/admin' => 'admin#login', as: 'login'
-
 
   resources :topics do
     member do
