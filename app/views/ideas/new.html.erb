@@ -7,8 +7,9 @@
       </h2>
       <hr>
       <p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tem alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
-      <%= form_for :idea, url: ideas_path do |f| %>
+      <%= form_for :idea, url: ideas_path do |f| %>       
       <div class="row">       
+           <div class="form-group" id="participantesForm">
         <div class="form-group col-lg-6">
           <%= f.label :author, "Nome" %>
           <%= f.text_field :author, :class => 'form-control' %>
@@ -17,12 +18,21 @@
           <%= f.label :email, "Email" %>
           <%= f.text_field :email, :class => 'form-control' %>
         </div>
-            <div class="form-group col-lg-6">
-        <button id="participante" type="button" class="btn btn-default btn-md">
+          </div>
+        <div class="form-group col-lg-6">
+        <button type="button" id="participante" class="btn btn-default btn-md">
             <span class="icon-stack">
                 <i class="glyphicon glyphicon-plus"></i>
                 <i class="glyphicon glyphicon-user"></i>
         Adicionar Participante
+          </button>
+         </div>
+             <div class="form-group col-lg-6">
+        <button type="button" id="participanteRem" class="btn btn-default btn-md">
+            <span class="icon-stack">
+                <i class="glyphicon glyphicon-minus"></i>
+                <i class="glyphicon glyphicon-user"></i>
+        Remover Participante
           </button>
          </div>
         <div class="clearfix"></div>
@@ -32,8 +42,8 @@
         </div>
                  <div class="clearfix"></div>
         <div class="form-group col-lg-12">
-            <%= f.label :text, "Resumo" %>
-          <%= f.text_area :text, :style => 'resize: vertical;', :type => 'text', :maxlength => 350, :class => 'form-control', :rows => '6', :required => true %>
+            <%= f.label :resumo, "Resumo" %>
+            <%= f.text_area :resumo, :style => 'resize: vertical;', :type => 'text', :maxlength => 350, :class => 'form-control', :rows => '6', :required => true %>
         </div>
         <div class="clearfix"></div>
         <div class="form-group col-lg-12">
