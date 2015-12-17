@@ -1,4 +1,5 @@
 class ManageIdeasController < ApplicationController
+  before_filter :login_required, :only => [:index, :approve, :delete]
   def index
     @ideas = Idea.where(winner: false).order('created_at DESC')
   end

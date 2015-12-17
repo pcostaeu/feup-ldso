@@ -1,0 +1,27 @@
+
+
+<%= render "layouts/admin_header" %>
+
+<div class="container" id="ideas">
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12">
+        <div class="col-lg-6">
+        <table align="left">
+            <% @admins.each do |admin| %>
+          <td style="padding-right: 15px;"><%= admin.email %></td>
+          <td style="padding-left: 15px;">
+            <%= button_to 'Apagar conta', admin, method: :delete, role:"button", class:"btn btn-danger", data: { confirm: 'Tem a certeza?' } %>
+          </td>
+        </table>
+        <!-- <%= link_to 'Edit', edit_admin_path(admin) %> -->
+        <% end %>
+        </div>
+        <%= render 'form' %>
+      </div>
+    </div>
+      <!--  <%= button_to 'Novo administrador', new_admin_path, role:"button", class:"btn btn-success" %> -->
+
+    </div>
+  </div>
+</div>

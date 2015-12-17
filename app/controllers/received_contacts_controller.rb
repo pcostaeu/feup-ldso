@@ -1,4 +1,6 @@
 class ReceivedContactsController < ApplicationController
+before_filter :login_required, :only => [:index, :delete, :read]
+
   def index
      @received_contacts = Contact.where(seen: false)
      @received_contacts_read = Contact.where(seen: true)
