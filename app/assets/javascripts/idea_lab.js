@@ -1,6 +1,41 @@
 var values;
-
+var i = 2;
 $(document).ready(function() {
+  $('#participanteRem').fadeOut();
+  $('#participante').click(function () {
+
+          if(i < 4)
+          {
+          $('#participantesForm').append("<div id=\"p_"+i+"\">"
+          +"<div class=\"form-group col-lg-6\"> "
+          +"<label for=\"idea_author"+i+"\">Nome</label>"
+          +" <input class=\"form-control\" type=\"text\" name=\"idea[author"+i+"]\" id=\"idea_author"+i+"\">"
+          +"</div>"
+          +" <div class=\"form-group col-lg-6\">"
+          +" <label for=\"idea_email"+i+"\">Email</label>"
+          +"  <input class=\"form-control\" type=\"text\" name=\"idea[email"+i+"]\" id=\"idea_email"+i+"\">"
+          +" </div>"
+          +"</div>");
+          i++;
+          $('#participanteRem').fadeIn();
+        }
+          if(i == 4){
+            $('#participante').fadeOut();
+}
+  });
+      $('#participanteRem').click(function () {
+          if(i > 2) {
+
+            i--;
+            $("#p_"+i+"").remove();
+            }
+            if(i < 4)
+            $('#participante').fadeIn();
+            if(i == 2){
+              $('#participanteRem').fadeOut();
+            }
+
+  });
   $("#nav").affix({
     offset: {
       top: $("#nav").position().top

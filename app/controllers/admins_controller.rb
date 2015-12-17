@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
-  before_filter :login_required, :only => [:index, :new, :create, :update, :destroy]
+  #before_filter :login_required, :only => [:index, :new, :create, :update, :destroy]
   # GET /admins
   # GET /admins.json
   def index

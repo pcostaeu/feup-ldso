@@ -9,14 +9,16 @@
       <p>We need your help to make FEUP better. If you have a idea to make it more substainable please send us your idea. The best ideas will earn a prize</p>
       <%= form_for :idea, url: ideas_path do |f| %>
       <div class="row">
-        <div class="form-group col-lg-6">
-          <%= f.label :author, "Name" %>
-          <%= f.text_field :author, :class => 'form-control',  :required => true  %>
-        </div>
-        <div class="form-group col-lg-6">
-          <%= f.label :email, "Email" %>
-          <%= f.text_field :email, :class => 'form-control' , :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
-        </div>
+        <div class="form-group" id="participantesForm">
+     <div class="form-group col-lg-6">
+       <%= f.label :author, "Nome" %>
+       <%= f.text_field :author, :class => 'form-control',  :required => true  %>
+     </div>
+     <div class="form-group col-lg-6">
+       <%= f.label :email, "Email" %>
+       <%= f.text_field :email, :class => 'form-control' , :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+     </div>
+       </div>
               <div class="form-group col-lg-6">
         <button type="button" id="participante" class="btn btn-default btn-md">
             <span class="icon-stack">
@@ -26,7 +28,7 @@
           </button>
          </div>
              <div class="form-group col-lg-6">
-        <button type="button" id="participanteRem" class="btn btn-default btn-md">
+        <button type="button" id="participanteRem" class="btn btn-default btn-md" >
             <span class="icon-stack">
                 <i class="glyphicon glyphicon-minus"></i>
                 <i class="glyphicon glyphicon-user"></i>
