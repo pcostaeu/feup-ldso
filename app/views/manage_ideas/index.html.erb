@@ -31,22 +31,6 @@
             </small>
           </h4>
         </div>
-          <% if idea.author1? %>
-          <div class="col-lg-6" style="padding:0px;">
-          <h4>Autor:
-            <small>
-              <%= idea.author1%>
-            </small>
-          </h4>
-        </div>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Email:
-            <small>
-              <%= idea.email1%>
-            </small>
-          </h4>
-        </div>
-          <% end %> 
           <% if idea.author2? %>
           <div class="col-lg-6" style="padding:0px;">
           <h4>Autor:
@@ -59,6 +43,22 @@
           <h4>Email:
             <small>
               <%= idea.email2%>
+            </small>
+          </h4>
+        </div>
+          <% end %> 
+          <% if idea.author3? %>
+          <div class="col-lg-6" style="padding:0px;">
+          <h4>Autor:
+            <small>
+              <%= idea.author3%>
+            </small>
+          </h4>
+        </div>
+        <div class="col-lg-6" style="padding:0px;">
+          <h4>Email:
+            <small>
+              <%= idea.email3%>
             </small>
           </h4>
         </div>
