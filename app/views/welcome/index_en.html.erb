@@ -1,163 +1,127 @@
 <%= render "layouts/en_header" %>
-<script src="javascripts/counter.js"></script>
+
 <div class="container" id="ideas">
 
   <div class="row">
     <div class="box">
       <div class="col-lg-12 text-center">
+        <% if @has_ideas != 0 %>
         <div class="carousel slide" id="carousel-example-generic">
           <!-- Indicators -->
           <ol class="carousel-indicators hidden-xs">
             <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
-            <li data-slide-to="1" data-target="#carousel-example-generic"></li>
-            <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+            <% @ideas.each do |idea| %>
+            <li data-slide-to=<%= @counter %> data-target="#carousel-example-generic"></li>
+            <% @counter = @counter + 1 %>
+            <% end %>
           </ol>
-
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(http://www.unilab.edu.br/wp-content/uploads/2015/09/arvorelon.jpg)">
+              <% if @first_idea.picture? %>
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
+              <% else %>
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.topic.picture.url%>)">
+              <% end %>
                 <div class="carousel-caption">
-                  <h2 id="scrolling_text">Title 1</h2>
+                  <h2><%= @first_idea.title%></h2>
                 </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(https://aidobonsai.files.wordpress.com/2012/06/be-the-church-the-tree_2270_1024x768.jpg)">
-                <div class="carousel-caption">
-                  <h2 id="scrolling_text">Title 2</h2>
-                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(http://wallpaper.ultradownloads.com.br/65047_Papel-de-Parede-Sol-entre-Arvores_1024x768.jpg)">
-                <div class="carousel-caption">
-                  <h2 id="scrolling_text">Title 3</h2>
+              <% @ideas.each do |idea| %>
+              <div class="item">
+                <% if idea.picture? %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.picture.url%>)">
+                  <% else %>
+                  <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.topic.picture.url%>)">
+                    <% end %>
+                    <div class="carousel-caption">
+                      <h2><%= idea.title%></h2>
+                    </div>
+                  </div>
                 </div>
+                <% end %>
               </div>
+              <!-- Controls -->
+              <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic">
+                <span class="icon-prev"></span>
+              </a>
+              <a class="right carousel-control" data-slide="next" href="#carousel-example-generic">
+                <span class="icon-next"></span>
+              </a>
             </div>
+            <% end %>
+            <h2 class="brand-before">
+              <small>Welcome to</small>
+            </h2>
+            <img alt="Imagem não disponível" class="img-responsive logo" src="/assets/logo_en.png">
           </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic">
-            <span class="icon-prev"></span>
-          </a>
-          <a class="right carousel-control" data-slide="next" href="#carousel-example-generic">
-            <span class="icon-next"></span>
-          </a>
         </div>
-        <h2 class="brand-before">
-          <small>Welcome to</small>
-        </h2>
-        <h1 class="brand-name">More SI</h1>
-        <hr class="tagline-divider">
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="box">
-      <div class="col-lg-12">
-        <hr>
-        <h2 class="intro-text text-center">FEUP e a
-          <strong>Sustentabilidade</strong>
-        </h2>
-        <hr>
-        <hr class="visible-xs">
-        <p>As instituições de ensino superior são responsáveis pela formação da maioria dos profissionais que assumem cargos relevantes na sociedade, devendo, por isso, assumir um papel preponderante no Desenvolvimento Sustentável. Além disso, devem ser elas
-          próprias modelos de sustentabilidade.</p>
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">FEUP and
+              <strong>Sustainability</strong>
+            </h2>
+            <hr>
+            <hr class="visible-xs">
+            <p>FEUP is deeply committed in contributing to a more sustainable society. With this goal a contest was created:  ‘More Sustainable Ideas’.</p>
+            <p>If you have an idea to help FEUP be more sustainable, please submit it. This way you will also
 
-        <p>A FEUP encontra-se fortemente empenhada em promover a sustentabilidade e comportamentos e práticas mais sustentáveis. Prova disso, é o
-          <a href="web_base.gera_pagina?p_pagina=31509" target="_blank">plano estratégico 2011-2015</a>
-          que contém secções dedicadas às políticas ambientais, sociais e económicas. O seu empenho em tornar-se mais sustentável reflete-se ainda no facto de ser membro da reconhecida associação internacional
-          <a href="web_gessi_docs.download_file?p_name=F2030586683/eauc_certificate.pdf" target="_blank">
-            <em>EAUC – Environmental Association for Universities and Colleges</em>
-          </a>
-          e na publicação do relatório de sustentabilidade desde 2006. O objetivo principal destes relatórios é proporcionar à comunidade FEUP e à sociedade em geral uma visão do seu desempenho nas diversas vertentes da sustentabilidade (social, económica e
-          ambiental), contribuindo também para a sensibilização de todos quantos compõem a instituição.</p><br>
-        <img alt="" class="img-responsive img-border" src="https://sigarra.up.pt/feup/pt/web_gessi_docs.download_file?p_name=F-1840222254/eauc_certificate.jpg"><br>
+be contributing to the sustainability of the planet. The submission of the idea must be in accordance with the <%= link_to "Regulation", '/resources/Regulation.pdf', :class => "href" %>. The best ideas will be rewarded and widely spread in accordance with the <%= link_to "Regulation",'resources/Regulation.pdf', :class => "href"%>.
+            </p>
+            <p>Below you may find some inspirational links:</p>
+            <ul>
+              <li><a href="http://www.crescimentoverde.gov.pt/" target="_blank">Compromisso para o Crescimento Verde</a></li>
+              <li><a href="http://www.pnud.org/content/undp/en/home/mdgoverview/" target="_blank">Sustainable Development Goals</a></li>
+              <li><a href="http://www.footprintnetwork.org/en/index.php/GFN/page/calculators/" target="_blank">Global Footprint Network</a></li>
+              <li><a href="http://www.wwf.pt/" target="_blank">WWF</a><br></li>
+</ul>
+            <br>
+            <img alt="Image not available" class="img-responsive img-border" src="https://sigarra.up.pt/feup/pt/web_gessi_docs.download_file?p_name=F-1840222254/eauc_certificate.jpg"><br>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="row" id="submitIdea">
-    <div class="box">
-      <div class="col-lg-12">
-        <hr>
-        <h2 class="intro-text text-center">Tens uma
-          <strong>ideia?</strong>
-        </h2>
-        <hr>
-        <p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tens alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
-        <form role="form">
-          <div class="row">
-            <div class="form-group col-lg-6">
-              <label>Nome</label>
-              <input class="form-control" type="text">
-            </div>
-            <div class="form-group col-lg-6">
-              <label>E-mail</label>
-              <input class="form-control" type="email">
-            </div>
-            <div class="clearfix"></div>
-            <div class="form-group col-lg-12">
-              <label>Título</label>
-              <input class="form-control" rows="6"></input>
-            </div>
-            <div class="form-group col-lg-12">
-              <label>Ideia</label>
-              <textarea class="form-control" rows="6" style="resize: vertical;" type="text"></textarea>
-            </div>
-            <div class="form-group col-lg-12">
-              <label>Escolha uma imagem que identifique o problema:
-              </label>
-              <input name="save" type="hidden" value="contact">
-              <button class="btn btn-default" type="submit">Escolher imagem</button>
-            </div>
-            <div class="form-group col-lg-12">
-              <input name="save" type="hidden" value="contact">
-              <button class="btn btn-default" type="submit">Submeter</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+      <%= render :file => '/ideas/new_en' %>
 
-  <div class="row">
-    <div class="box">
-      <div class="col-lg-12">
-        <hr>
-        <h2 class="intro-text text-center">Consumos desde o início de 2015</h2>
-        <hr>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <h2 class="intro-text text-center">
-              <strong>Electricidade (kWh)</strong>
-            </h2>
-            <div class="text-center">
-              <span class="counter1 counter-analog" data-direction="up" data-format="99999999">0</span>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <h2 class="intro-text text-center">
-              <strong>Água (M
-                <sup>3</sup>)</strong>
-            </h2>
-            <div class="text-center">
-              <span class="counter2 counter-analog" data-direction="up" data-format="99999999">0</span>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <h2 class="intro-text text-center">
-              <strong>Papel (páginas)</strong>
-            </h2>
-            <div class="text-center">
-              <span class="counter3 counter-analog" data-direction="up" data-format="99999999">0</span>
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">Consuption since beggining of  2015</h2>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="intro-text text-center">
+                  <strong>Electricity (kWh)</strong>
+                </h2>
+                <div class="text-center">
+                  <span class="counter1 counter-analog" data-direction="up" data-format="99999999">0</span>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="intro-text text-center">
+                  <strong>Water (M
+                    <sup>3</sup>)</strong>
+                </h2>
+                <div class="text-center">
+                  <span class="counter2 counter-analog" data-direction="up" data-format="99999999">0</span>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="intro-text text-center">
+                  <strong>Paper (pages)</strong>
+                </h2>
+                <div class="text-center">
+                  <span class="counter3 counter-analog" data-direction="up" data-format="99999999">0</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>

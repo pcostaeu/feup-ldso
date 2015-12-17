@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :manage_ideas
   resources :received_contacts
   resources :topics
+  resources :top_ideas
 
   root 'welcome#index'
 
@@ -13,11 +14,6 @@ Rails.application.routes.draw do
   get '/contacts_en' => 'contacts#index_en', as: 'contacts_english'
   get '/admin' => 'admin#login', as: 'login'
 
-  resources :ideas do
-    member do
-      post :cancel
-    end
-  end
 
   resources :topics do
     member do
@@ -37,15 +33,21 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :manage_ideas do
+  resources :top_ideas do
     member do
-      post :delete
+      post :remove
     end
   end
+
 
   resources :manage_ideas do
     member do
       post :approve
+    end
+  end
+  resources :manage_ideas do
+    member do
+      post :delete
     end
   end
 
