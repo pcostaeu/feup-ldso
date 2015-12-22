@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
      session[:admin_id] = admin.id
      redirect_to manage_ideas_path, notice: 'Logged in!'
    else
+     flash[:alert] = 'Dados inválidos'
      render :new
    end
  end

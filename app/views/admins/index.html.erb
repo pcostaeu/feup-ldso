@@ -7,17 +7,18 @@
     <div class="box">
       <div class="col-lg-12">
         <div class="col-lg-6">
-        <table align="left">
-            <% @admins.each do |admin| %>
-          <td style="padding-right: 15px;"><%= admin.email %></td>
-          <td style="padding-left: 15px;">
+        <ul id="listAdmins">
+          <% Admin.all.each do |admin| %>
+            <li> <strong><%= admin.email %></strong></li>
+              <!-- <%= link_to 'Edit', edit_admin_path(admin) %> -->
             <%= button_to 'Apagar conta', admin, method: :delete, role:"button", class:"btn btn-danger", data: { confirm: 'Tem a certeza?' } %>
-          </td>
-        </table>
-        <!-- <%= link_to 'Edit', edit_admin_path(admin) %> -->
-        <% end %>
+            <br>
+            <% end %>
+        </ul>
         </div>
+          <div class="col-lg-6">
         <%= render 'form' %>
+      </div>
       </div>
     </div>
       <!--  <%= button_to 'Novo administrador', new_admin_path, role:"button", class:"btn btn-success" %> -->

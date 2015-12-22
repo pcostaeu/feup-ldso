@@ -19,6 +19,11 @@
             <div class="modal-body">
               <%= form_tag sessions_path do %>
               <div class="form col-md-12 center-block">
+                <% if flash[:alert] %>
+                  <div class="alert alert-danger">
+                    <strong><%= flash[:alert] %></strong>
+                  </div>
+                <% end %>
                 <div class="form-group">
                   <%= text_field_tag :email, nil, class:'form-control input-lg', :placeholder => 'Email', :style => "text-align: left" %>
                 </div>
