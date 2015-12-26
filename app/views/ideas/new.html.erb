@@ -7,8 +7,8 @@
       </h2>
       <hr>
       <p>O nosso objetivo é que nos ajudes a melhorar a FEUP. Se tem alguma ideia, em como tornar a FEUP mais sustentável, submete a tua ideia. Temos uma surpresa para as melhores ideias.</p>
-      <%= form_for :idea, url: ideas_path do |f| %>       
-      <div class="row">       
+      <%= form_for :idea, url: ideas_path do |f| %>
+      <div class="row">
            <div class="form-group" id="participantesForm">
         <div class="form-group col-lg-6">
           <%= f.label :author, "Nome" %>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group col-lg-6">
           <%= f.label :email, "Email" %>
-          <%= f.text_field :email, :class => 'form-control' , :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+          <%= f.text_field :email, :class => 'form-control' , :required => true, :pattern => '([A-Za-z0-9]*)@fe.up.pt' %>
         </div>
           </div>
         <div class="form-group col-lg-6">

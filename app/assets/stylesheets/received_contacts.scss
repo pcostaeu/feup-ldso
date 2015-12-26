@@ -1,8 +1,12 @@
 // Place all the styles related to the receivedContacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.back-color > li > a{
+.back-color > li > a {
   font-size: 125%;
   background-color: lightgrey;
+}
+.botaolida {
+  position: relative;
+  padding-top: 1.5%;
+  right: 0;
 }

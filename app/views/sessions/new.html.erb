@@ -1,8 +1,8 @@
-<div class="brand">Mais IS</div>
+<div class="brand">Mais Ideias Sustentáveis</div>
 
 <nav class="navbar navbar-default navbar-static" id="nav" role="navigation">
   <div class="navbar-header">
-    <a class="navbar-brand" href="index.html">Mais IS</a>
+    <a class="navbar-brand" href="/">Mais IS</a>
   </div>
 </nav>
 
@@ -25,7 +25,7 @@
                   </div>
                 <% end %>
                 <div class="form-group">
-                  <%= text_field_tag :email, nil, class:'form-control input-lg', :placeholder => 'Email', :style => "text-align: left" %>
+                  <%= text_field_tag :email, nil, class:'form-control input-lg', :placeholder => 'Email', :style => "text-align: left", pattern: "([A-Za-z0-9]*)@fe.up.pt" %>
                 </div>
                 <div class="form-group">
                   <%= password_field_tag :password, nil, class: 'form-control input-lg', :placeholder => 'Password' %>

@@ -1,28 +1,31 @@
-
-
 <%= render "layouts/admin_header" %>
 
 <div class="container" id="ideas">
   <div class="row">
     <div class="box">
       <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">Gestão de
+          <strong>administradores</strong>
+        </h2>
+        <hr>
         <div class="col-lg-6">
-        <ul id="listAdmins">
-          <% Admin.all.each do |admin| %>
-            <li> <strong><%= admin.email %></strong></li>
-              <!-- <%= link_to 'Edit', edit_admin_path(admin) %> -->
-            <%= button_to 'Apagar conta', admin, method: :delete, role:"button", class:"btn btn-danger", data: { confirm: 'Tem a certeza?' } %>
+          <h4 class="intro-text text-center">Contas existentes</h4>
+          <ul id="listAdmins">
+            <% Admin.all.each do |admin| %>
+            <li class="push-down">
+              <strong><%= admin.email %></strong>
+            </li>
+            <%= button_to 'X', admin, method: :delete, role:"button", class:"btn btn-danger push-right", data: { confirm: 'Tem a certeza?' } %>
             <br>
             <% end %>
-        </ul>
+          </ul>
         </div>
-          <div class="col-lg-6">
-        <%= render 'form' %>
+        <div class="col-lg-6">
+          <h4 class="intro-text text-center">Criar conta</h4>
+          <%= render 'form' %>
+        </div>
       </div>
-      </div>
-    </div>
-      <!--  <%= button_to 'Novo administrador', new_admin_path, role:"button", class:"btn btn-success" %> -->
-
     </div>
   </div>
 </div>
