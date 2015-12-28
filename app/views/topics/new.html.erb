@@ -12,20 +12,13 @@
         <div class="row">
           <div class="form-group col-lg-6">
             <%= f.label :name, "Categoria" %>
-            <%= f.text_field :name, :class => 'form-control' %>
+            <%= f.text_field :name, :class => 'form-control', :required => true, :'data-errormessage-value-missing' => 'Nome obrigatório' %>
           </div>
           <div class="form-group col-lg-12">
             <label style="float:left;">Escolha uma imagem que identifique a categoria:</label>
             <div class="col-lg-6">
-              <%= f.file_field :picture%>
+              <%= f.file_field :picture , :required => true, :'data-errormessage-value-missing' => 'Imagem obrigatória'%>
             </div>
-          </div>
-          <div class="form-group col-lg-12">
-            <% if @topic.errors.any? %>
-              <p><%= @topic.errors[:picture].first %></p>
-              <p><%= @topic.errors[:name].first %></p>
-            <% end %>
-            <%= f.submit "Submeter", :class => 'btn btn-default' %>
           </div>
         </div>
         <% end %>
