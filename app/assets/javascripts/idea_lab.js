@@ -54,6 +54,22 @@ $(document).ready(function() {
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = "0px";
   });
+
+  function checkWidth() {
+    var windowSize = $(window).width();
+      if (windowSize < 768) {
+        var url = window.location.href;
+        if(!$('.english').lenght && url.substring(url.length - 2) != "en")
+          $('#nav ul').append('<li class="english"><a class="a" href="/en">English</a></li>');
+        else {
+          $('#nav ul').append('<li class="english"><a class="a" href="/">Português</a></li>');
+        }
+      }
+      else
+        $('.english').remove();
+  }
+  checkWidth();
+  $(window).resize(checkWidth);
 });
 
 $(function() {
