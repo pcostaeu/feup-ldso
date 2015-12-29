@@ -52,16 +52,16 @@
             </div>
             <div class="clearfix"></div>
             <div class="form-group col-lg-12">
-              <label style="float: left">Escolha uma imagem que identifique o problema:</label>
-              <div class="col-lg-6">
-                <%= f.file_field :picture %>
-              </div>
+              <label style="float:left; padding-right: 5px">Escolha uma imagem que identifique o problema:</label>
+              <%= f.file_field :picture %>
             </div>
             <div class="form-group col-lg-12">
               <h5>Termos e condições</h5>
-              <ul>
-                <li><%= f.radio_button :auts, 'aut_full', :checked => true %> Autorizo a divulgação da ideia sem limitações.</li>
-                <li><%= f.radio_button :auts, 'aut_parcial' %> Autorizo a divulgação do título, resumo da ideia.</li>
+              <ul class="auts-list">
+                <li><%= f.radio_button :auts, 'aut_full', :checked => true %>
+                  Autorizo a divulgação da ideia sem limitações.</li>
+                <li><%= f.radio_button :auts, 'aut_parcial' %>
+                  Autorizo a divulgação do título, resumo da ideia.</li>
               </ul>
             </div>
             <div class="form-group col-lg-12">

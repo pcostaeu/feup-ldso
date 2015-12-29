@@ -11,25 +11,28 @@
           <ol class="carousel-indicators hidden-xs">
             <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
             <% @ideas.each do |idea| %>
-            <li data-slide-to=<%= @counter %> data-target="#carousel-example-generic"></li>
+            <li data-slide-to="<%= @counter %>" data-target="#carousel-example-generic"></li>
             <% @counter = @counter + 1 %>
             <% end %>
           </ol>
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
+              <%= link_to ideas_path(:controller => "index", :anchor => "idea" + @first_idea.id.to_s) do %>
               <% if @first_idea.picture? %>
               <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
-              <% else %>
-              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.topic.picture.url%>)">
-              <% end %>
-                <div class="carousel-caption">
-                  <h2><%= @first_idea.title%></h2>
+                <% else %>
+                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.topic.picture.url%>)">
+                  <% end %>
+                  <div class="carousel-caption">
+                    <h2><%= @first_idea.title%></h2>
+                  </div>
                 </div>
-              </div>
+                <%end%>
               </div>
               <% @ideas.each do |idea| %>
               <div class="item">
+                <%= link_to ideas_path(:controller => "index", :anchor => "idea" + idea.id.to_s) do %>
                 <% if idea.picture? %>
                 <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.picture.url%>)">
                   <% else %>
@@ -40,6 +43,7 @@
                     </div>
                   </div>
                 </div>
+                <% end %>
                 <% end %>
               </div>
               <!-- Controls -->
@@ -68,18 +72,25 @@
             </h2>
             <hr>
             <hr class="visible-xs">
-            <p>FEUP is deeply committed in contributing to a more sustainable society. With this goal a contest was created:  ‘More Sustainable Ideas’.</p>
-            <p>If you have an idea to help FEUP be more sustainable, please submit it. This way you will also
-
-be contributing to the sustainability of the planet. The submission of the idea must be in accordance with the <%= link_to "Regulation", '/resources/Regulation.pdf', :class => "href" %>. The best ideas will be rewarded and widely spread in accordance with the <%= link_to "Regulation",'resources/Regulation.pdf', :class => "href"%>.
+            <p>FEUP is deeply committed in contributing to a more sustainable society. With this goal a contest was created: ‘More Sustainable Ideas’.</p>
+            <p>If you have an idea to help FEUP be more sustainable, please submit it. This way you will also be contributing to the sustainability of the planet. The submission of the idea must be in accordance with the
+              <%= link_to "regulation", '/resources/Regulation.pdf', :class => "href" %>. The best ideas will be rewarded and widely spread in accordance with the
+              <%= link_to "regulation",'resources/Regulation.pdf', :class => "href"%>.
             </p>
             <p>Below you may find some inspirational links:</p>
             <ul>
-              <li><a href="http://www.crescimentoverde.gov.pt/" target="_blank">Compromisso para o Crescimento Verde</a></li>
-              <li><a href="http://www.pnud.org/content/undp/en/home/mdgoverview/" target="_blank">Sustainable Development Goals</a></li>
-              <li><a href="http://www.footprintnetwork.org/en/index.php/GFN/page/calculators/" target="_blank">Global Footprint Network</a></li>
-              <li><a href="http://www.wwf.pt/" target="_blank">WWF</a><br></li>
-</ul>
+              <li>
+                <a href="http://www.crescimentoverde.gov.pt/" target="_blank">Compromisso para o Crescimento Verde</a>
+              </li>
+              <li>
+                <a href="http://www.pnud.org/content/undp/en/home/mdgoverview/" target="_blank">Sustainable Development Goals</a>
+              </li>
+              <li>
+                <a href="http://www.footprintnetwork.org/en/index.php/GFN/page/calculators/" target="_blank">Global Footprint Network</a>
+              </li>
+              <li>
+                <a href="http://www.wwf.pt/" target="_blank">WWF</a><br></li>
+            </ul>
             <br>
             <img alt="Image not available" class="img-responsive img-border" src="https://sigarra.up.pt/feup/pt/web_gessi_docs.download_file?p_name=F-1840222254/eauc_certificate.jpg"><br>
           </div>
@@ -92,7 +103,7 @@ be contributing to the sustainability of the planet. The submission of the idea 
         <div class="box">
           <div class="col-lg-12">
             <hr>
-            <h2 class="intro-text text-center">Consuption since beggining of  2015</h2>
+            <h2 class="intro-text text-center">Consuptions since beggining of 2015</h2>
             <hr>
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-4">

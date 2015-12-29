@@ -15,7 +15,6 @@ $(document).ready(function() {
   });
   $('#participanteRem').click(function() {
     if (i > 2) {
-
       i--;
       $("#p_" + i + "").remove();
     }
@@ -68,7 +67,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: ($("#submitIdea").position().top - 140)
+          scrollTop: ($("#submitIdea").position().top - 80)
         }, 1000);
         return false;
       }

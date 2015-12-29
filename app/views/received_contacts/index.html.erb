@@ -18,9 +18,9 @@
           <% @received_contacts.each do |contact| %>
           <div class="col-lg-12">
             <div class="col-lg-12 text-justify">
-              <h3>Assunto:
+              <h4>Assunto:
                 <%= contact.title %>
-              </h3>
+              </h4>
               <p>
                 <%= contact.message %>
               </p>
@@ -65,9 +65,9 @@
           <% @received_contacts_read.each do |contact| %>
           <div class="col-lg-12">
             <div class="col-lg-12 text-justify">
-              <h3>Assunto:
+              <h4>Assunto:
                 <%= contact.title %>
-              </h3>
+              </h4>
               <p>
                 <%= contact.message %>
               </p>
@@ -75,27 +75,27 @@
           </div>
           <div class="col-lg-12">
             <div class="col-lg-6">
-              <h3>Nome:
+              <h4>Nome:
                 <small>
                   <%= contact.name %>
                 </small>
-              </h3>
+              </h4>
             </div>
             <div class="col-lg-6" id="email">
-              <h3>Email:
+              <h4>Email:
                 <small>
                   <%= contact.email %>
                 </small>
-              </h3>
+              </h4>
             </div>
           </div>
           <div class="col-lg-12">
             <div class="col-lg-6">
-              <h3>Data:
+              <h4>Data:
                 <small>
                   <%= contact.date %>
                 </small>
-              </h3>
+              </h4>
             </div>
             <div class="botaolida col-lg-6" id="email">
               <%= button_to 'Apagar', delete_received_contact_path(contact), method: :post, class: "btn btn-danger" %>
