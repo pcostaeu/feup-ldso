@@ -11,7 +11,7 @@
           <ol class="carousel-indicators hidden-xs">
             <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
             <% @ideas.each do |idea| %>
-            <li data-slide-to=<%= @counter %> data-target="#carousel-example-generic"></li>
+            <li data-slide-to="<%= @counter %>" data-target="#carousel-example-generic"></li>
             <% @counter = @counter + 1 %>
             <% end %>
           </ol>
@@ -20,16 +20,16 @@
             <div class="item active">
               <%= link_to ideas_path(:controller => "index", :anchor => "idea" + @first_idea.id.to_s) do %>
               <% if @first_idea.picture? %>
-                <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
-              <% else %>
+              <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
+                <% else %>
                 <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.topic.picture.url%>)">
-              <% end %>
+                  <% end %>
                   <div class="carousel-caption">
                     <h2><%= @first_idea.title%></h2>
                   </div>
                 </div>
-              <%end%>
-            </div>
+                <%end%>
+              </div>
               <% @ideas.each do |idea| %>
               <div class="item">
                 <%= link_to ideas_path(:controller => "index", :anchor => "idea" + idea.id.to_s) do %>
@@ -73,16 +73,24 @@
             <hr>
             <hr class="visible-xs">
             <p>A FEUP encontra-se fortemente empenhada em contribuir para uma sociedade mais sustentável. Com este objetivo foi criado o Concurso Mais Ideias Sustentáveis.</p>
-            <p>Se tem uma ideia para tornar a FEUP mais sustentável, por favor submeta-a. Desta forma, está também a contribuir para a sustentabilidade do planeta. A submissão da ideia deve estar de acordo com o <%= link_to "Regulamento", '/resources/Regulation.pdf', :class => "href" %>. As melhores ideias serão
-              premiadas e amplamente divulgadas, de acordo com o <%= link_to "Regulamento", '/resources/Regulation.pdf', :class => "href" %>.
+            <p>Se tem uma ideia para tornar a FEUP mais sustentável, por favor submeta-a. Desta forma, está também a contribuir para a sustentabilidade do planeta. A submissão da ideia deve estar de acordo com o
+              <%= link_to "Regulamento", '/resources/Regulation.pdf', :class => "href" %>. As melhores ideias serão premiadas e amplamente divulgadas, de acordo com o
+              <%= link_to "Regulamento", '/resources/Regulation.pdf', :class => "href" %>.
             </p>
             <p>Em seguida, encontram-se alguns links que podem ser inspiradores:</p>
             <ul>
-              <li><a href="http://www.crescimentoverde.gov.pt/" target="_blank">Compromisso para o Crescimento Verde</a></li>
-              <li><a href="http://www.pnud.org/content/undp/en/home/mdgoverview/" target="_blank">Sustainable Development Goals</a></li>
-              <li><a href="http://www.footprintnetwork.org/en/index.php/GFN/page/calculators/" target="_blank">Global Footprint Network</a></li>
-              <li><a href="http://www.wwf.pt/" target="_blank">WWF</a><br></li>
-</ul>
+              <li>
+                <a href="http://www.crescimentoverde.gov.pt/" target="_blank">Compromisso para o Crescimento Verde</a>
+              </li>
+              <li>
+                <a href="http://www.pnud.org/content/undp/en/home/mdgoverview/" target="_blank">Sustainable Development Goals</a>
+              </li>
+              <li>
+                <a href="http://www.footprintnetwork.org/en/index.php/GFN/page/calculators/" target="_blank">Global Footprint Network</a>
+              </li>
+              <li>
+                <a href="http://www.wwf.pt/" target="_blank">WWF</a><br></li>
+            </ul>
             <br>
             <img alt="Imagem não disponível" class="img-responsive img-border" src="https://sigarra.up.pt/feup/pt/web_gessi_docs.download_file?p_name=F-1840222254/eauc_certificate.jpg"><br>
           </div>
