@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   resources :admins
   resources :ideas
   resources :contacts
@@ -15,10 +9,9 @@ Rails.application.routes.draw do
   resources :top_ideas
 
   resources :sessions, only: [:new, :create, :destroy]
-   get 'signup', to: 'admins#new', as: 'signup'
-   get 'login', to: 'sessions#new', as: 'login'
-   get 'logout', to: 'sessions#destroy', as: 'logout'
-   resources :admins
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  post 'update', to: 'admins#update', as: 'update'
 
   root 'welcome#index'
 
@@ -50,12 +43,12 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :manage_ideas do
     member do
       post :approve
     end
   end
+
   resources :manage_ideas do
     member do
       post :delete
@@ -63,5 +56,4 @@ Rails.application.routes.draw do
   end
 
   get '*unmatched_route', to: 'application#not_found'
-
 end
