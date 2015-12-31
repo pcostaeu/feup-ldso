@@ -6,7 +6,7 @@
         <strong>idea?</strong>
       </h2>
       <hr>
-      <p>We need your help to make FEUP better. If you have a idea to make it more substainable please send us your idea. The best ideas will earn a prize.</p>
+      <p>We want you to help us improve FEUP. If you have an idea to help FEUP be more sustainable, please submit it. There is a surprise reward for the best ideas.</p>
       <%= form_for :idea, url: ideas_path do |f| %>
       <div class="row">
         <div class="form-group" id="participantesForm">
@@ -56,7 +56,7 @@
               <%= f.file_field :picture %>
             </div>
             <div class="form-group col-lg-12">
-              <h5>Termos e condições</h5>
+              <h5>Terms and conditions</h5>
               <ul class="auts-list">
                 <li><%= f.radio_button :auts, 'aut_full', :checked => true %>
                   Authorize the disclosure of the idea without limitations.</li>

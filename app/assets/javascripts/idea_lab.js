@@ -2,6 +2,7 @@ var values;
 var i = 2;
 $(document).ready(function() {
   $('#participanteRem').fadeOut();
+
   $('#participante').click(function() {
 
     if (i < 4) {
@@ -13,6 +14,7 @@ $(document).ready(function() {
       $('#participante').fadeOut();
     }
   });
+
   $('#participanteRem').click(function() {
     if (i > 2) {
       i--;
@@ -25,39 +27,23 @@ $(document).ready(function() {
     }
 
   });
+
   $("#nav").affix({
     offset: {
       top: $("#nav").position().top
     }
   });
   var height = $("#nav").position().top;
-  // add padding element above is affixed
+
   $("#nav").on("affix.bs.affix", function() {
-    //$("#teste").addClass("padded");
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = height + "px";
   });
 
-  // and remove again when unaffixed
   $("#nav").on("affix-top.bs.affix", function() {
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = "0px";
   });
-
-  function checkWidth() {
-    var windowSize = $(window).width();
-    if (windowSize < 768) {
-      var url = window.location.href;
-      if (!$('.english').lenght && url.substring(url.length - 2) != "en")
-        $('#nav ul').append('<li class="english"><a class="a" href="/en">English</a></li>');
-      else {
-        $('#nav ul').append('<li class="english"><a class="a" href="/">Português</a></li>');
-      }
-    } else
-      $('.english').remove();
-  }
-  checkWidth();
-  $(window).resize(checkWidth);
 });
 
 $(function() {
@@ -92,7 +78,11 @@ function hide_remove_top_idea(id) {
 }
 
 function showMore(id, text) {
-  $('#text' + id).append("<h4>Descrição:</h4><p>" + text + "</p>");
+  var url = window.location.href;
+  if (url.substring(url.length - 2) != "en")
+    $('#text' + id).append("<h4>Descrição</h4><p>" + text + "</p>");
+  else
+    $('#text' + id).append("<h4>Description</h4><p>" + text + "</p>");
   $('#showMoreButton' + id).fadeOut();
   $('#showMoreButton' + id).hide();
   $('#showLessButton' + id).fadeIn();
