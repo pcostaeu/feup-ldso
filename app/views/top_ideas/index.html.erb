@@ -81,6 +81,17 @@
         </div>
         <% end %>
       </div>
+      <div class="col-lg-12">
+        <% if idea.auts == "aut_full" %>
+        <h4>Autorização:
+          <small>completa</small>
+        </h4>
+        <% else %>
+        <h4>Autorização:
+          <small>parcial</small>
+        </h4>
+        <%end%>
+      </div>
       <div id="idea<%= idea.id %>">
         <%= button_to 'Remover Destaque', remove_top_idea_path(idea), method: :post, remote: true, role:"button" , class:"btn btn-danger", style:"float: right", data: { confirm: 'Tem a certeza?' } %>
       </div>

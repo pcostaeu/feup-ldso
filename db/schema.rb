@@ -23,12 +23,6 @@ ActiveRecord::Schema.define(version: 20151229190426) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "concretize_ideas", force: :cascade do |t|
-    t.integer  "ideia_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
@@ -59,28 +53,11 @@ ActiveRecord::Schema.define(version: 20151229190426) do
     t.string   "auts"
   end
 
-  create_table "month_ideas", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "idea_id"
-  end
-
-  add_index "month_ideas", ["idea_id"], name: "index_month_ideas_on_idea_id", using: :btree
-
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
