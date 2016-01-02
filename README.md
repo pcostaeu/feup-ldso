@@ -13,7 +13,6 @@ For the Idea Lab on Sustainability a web platform should be developed. The platf
 
 Members
 --
-- Catarina Terra
 - Diogo Soares
 - Joana Beleza
 - João Morgado
