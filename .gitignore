@@ -12,9 +12,7 @@
 !/log/.keep
 /tmp
 *.log
-Gemfile.lock
 log/development.log
-Gemfile.lock
 *.log
 *.jpg
 .DS_Store
