@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
+  #Try to make admin login. If data is correct, a session variable is created
   def create
     admin = Admin.find_by_email(params[:email])
     if admin && admin.authenticate(params[:password])
@@ -13,6 +11,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  #Makes logout
   def destroy
     session[:admin_id] = nil
     redirect_to root_url

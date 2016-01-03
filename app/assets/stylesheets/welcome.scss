@@ -1,6 +1,4 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//---------------- CSS relative to all pages -----------------------------------
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   background: url(/assets/bg.jpg) no-repeat center center fixed;
@@ -20,56 +18,27 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
 }
-.logo_small {
-  display: inline-block;
-  max-width: 6%;
-  margin-bottom: 1.2%;
+html,
+body {
+  height: 100%;
 }
-#log-out {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 5px;
-  color: red;
-  z-index: 0;
+.page {
+  min-height: 100%;
+  margin-bottom: -2.1%;
 }
-/* ------------------- Carousel Styling ------------------- */
-.carousel-inner {
-  border-radius: 15px;
-}
-.carousel-caption {
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  padding: 0 0 10px 25px;
-  color: #fff;
-  text-align: left;
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  z-index: 15;
-  margin: 0;
-  padding: 0 25px 25px 0;
-  text-align: right;
-}
-.section-white {
-  padding: 10px 0;
-}
-.section-white {
-  background-color: #fff;
-  color: #555;
+.page:after {
+  content: "";
+  display: block;
 }
 .logo {
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+.logo_small {
+  display: inline-block;
+  max-width: 6%;
+  margin-bottom: 1.2%;
 }
 .brand img.action.language {
   position: absolute;
@@ -173,7 +142,6 @@ footer p {
   #language {
     display: none;
   }
-
   .brand {
     display: inherit;
     margin: 0;
@@ -240,21 +208,16 @@ footer p {
     clear: both;
   }
 }
+#log-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5px;
+  color: red;
+  z-index: 0;
+}
 
-// --------------- CROP IMAGES SLIDE ---------------
-html,
-body {
-  height: 100%;
-}
-.page {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -2.1%;
-}
-.page:after {
-  content: "";
-  display: block;
-}
+// ----------------------- Crop Images from carousel ---------------------------
 .FlexEmbed {
   display: block;
   overflow: hidden;
@@ -282,6 +245,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  /* max-height: 600px;*/
   max-width: 100%;
+}
+
+//----------------------- Carousel Styling -------------------------------------
+.carousel-inner {
+  border-radius: 15px;
+}
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+.section-white {
+  padding: 10px 0;
+}
+.section-white {
+  background-color: #fff;
+  color: #555;
 }

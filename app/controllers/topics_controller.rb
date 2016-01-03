@@ -1,14 +1,5 @@
 class TopicsController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
-  def new
-    @topic = Topic.new
-  end
-
+  # Creates new topic to be associated with an idea
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
@@ -19,7 +10,9 @@ class TopicsController < ApplicationController
   end
 
   private
-    def topic_params
-        params.require(:topic).permit(:name, :picture)
-    end
+
+  # parameters necessary to create a new topic, prevents attemps of submiting other stuff that we dont want
+  def topic_params
+    params.require(:topic).permit(:name, :picture)
+  end
 end

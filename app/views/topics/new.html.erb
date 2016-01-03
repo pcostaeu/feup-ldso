@@ -20,6 +20,9 @@
               <%= f.file_field :picture , :required => true, :'data-errormessage-value-missing' => 'Imagem obrigatória'%>
             </div>
           </div>
+          <div class="form-group col-lg-12">
+            <%= f.submit "Submeter", :class => 'btn btn-default' %>
+          </div>
         </div>
         <% end %>
       </div>

@@ -1,16 +1,16 @@
-// Place all the styles related to the Admins controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//admins view - puts in two columns the emails
 #listAdmins {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
   list-style-type: none;
 }
+//some corrections to buttons after emails
 .push-right {
   margin-left: 5px;
   margin-top: 7px;
 }
+//simple corrections to emails
 .push-down {
   float: left;
   margin-top: 8px;

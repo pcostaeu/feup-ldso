@@ -3,6 +3,7 @@ var i = 2;
 $(document).ready(function() {
   $('#participanteRem').fadeOut();
 
+  //Adds a new participant to submit idea form
   $('#participante').click(function() {
 
     if (i < 4) {
@@ -15,6 +16,7 @@ $(document).ready(function() {
     }
   });
 
+  //Removes a participant from submit idea form
   $('#participanteRem').click(function() {
     if (i > 2) {
       i--;
@@ -28,6 +30,7 @@ $(document).ready(function() {
 
   });
 
+  //Fixes nav bar to top after scroll
   $("#nav").affix({
     offset: {
       top: $("#nav").position().top
@@ -35,17 +38,20 @@ $(document).ready(function() {
   });
   var height = $("#nav").position().top;
 
+  //Fix to prevent a small jump after scroll related to nav bar
   $("#nav").on("affix.bs.affix", function() {
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = height + "px";
   });
 
+  //Fix to prevent a small jump after scroll related to nav bar
   $("#nav").on("affix-top.bs.affix", function() {
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = "0px";
   });
 });
 
+//Makes vertical scroll effect to ideas div
 $(function() {
   $('#click').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -61,22 +67,26 @@ $(function() {
   });
 });
 
+//Puts simple text to admin pages (to not be necessary reload page) - manage ideas
 function hide_approved_idea(id) {
   document.getElementById('idea' + id).innerHTML = "<h4>Adicionado</h4>";
   document.getElementById('idea' + id).style.color = "green";
 }
 
+//Puts simple text to admin pages (to not be neccessary reload page) - manage ideas
 function hide_deleted_idea(id) {
   document.getElementById('idea' + id).innerHTML = "<h4>Apagado</h4>";
   document.getElementById('idea' + id).style.color = "red";
 }
 
+//Puts simple text to admin pages (to not be neccessary reload page) - top_ideas
 function hide_remove_top_idea(id) {
   document.getElementById('idea' + id).innerHTML = "<h4>Removida</h4>";
   document.getElementById('idea' + id).style.color = "red";
   document.getElementById('idea' + id).style.float = "right";
 }
 
+//Fucntion to show more button. Adds to a div the text received on funcion
 function showMore(id, text) {
   var url = window.location.href;
   if (url.substring(url.length - 2) != "en")
@@ -88,6 +98,7 @@ function showMore(id, text) {
   $('#showLessButton' + id).fadeIn();
 }
 
+//Fucntion to show less button. Remeve div with specified ID.
 function showLess(id) {
   $('#text' + id).empty();
   $('#showMoreButton' + id).fadeIn();

@@ -1,12 +1,11 @@
-// Place all the styles related to the receivedContacts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//puts color on tabs and resizes the text
 .back-color > li > a {
   font-size: 125%;
   background-color: lightgrey;
 }
-.botaolida {
-  position: relative;
-  padding-top: 1.5%;
-  right: 0;
+
+//pushes buttons to right
+.button {
+  float: right;
+  margin-right: 3px;
 }

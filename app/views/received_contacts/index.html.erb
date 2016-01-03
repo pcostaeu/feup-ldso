@@ -50,9 +50,9 @@
                 </small>
               </h4>
             </div>
-            <div class="btn-group botaolida col-lg-6" id="email">
-              <%= button_to 'Marcar como lida', read_received_contact_path(contact), method: :post, class: "btn btn-success" %>
-              <%= button_to 'Apagar', delete_received_contact_path(contact), method: :post, class: "btn btn-danger" %>
+            <div class="btn-group col-lg-6" id="email">
+              <%= button_to 'Apagar', delete_received_contact_path(contact), method: :post, class: "btn btn-danger button" %>
+              <%= button_to 'Marcar como lida', read_received_contact_path(contact), method: :post, class: "btn btn-success button" %>
             </div>
           </div>
           <div class="col-lg-12">
@@ -98,7 +98,7 @@
               </h4>
             </div>
             <div class="botaolida col-lg-6" id="email">
-              <%= button_to 'Apagar', delete_received_contact_path(contact), method: :post, class: "btn btn-danger" %>
+              <%= button_to 'Apagar', delete_received_contact_path(contact), method: :post, class: "btn btn-danger button" %>
             </div>
           </div>
           <div class="col-lg-12">

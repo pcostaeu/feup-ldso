@@ -1,12 +1,11 @@
 class ContactsController < ApplicationController
-
   def index
   end
 
   def new
-    @contact = Contact.new
   end
 
+  # After submit, contact is created with parameters necessary and is saved to database
   def create
     @contact = Contact.new(contact_params)
     @contact.date = Time.zone.now.to_date
@@ -19,8 +18,9 @@ class ContactsController < ApplicationController
   end
 
   private
-  def contact_params
-      params.require(:contact).permit(:name, :title, :email, :message)
-  end
 
+  # parameters necessary to submit a new contact, prevents attemps of submiting other stuff that we dont want
+  def contact_params
+    params.require(:contact).permit(:name, :title, :email, :message)
+  end
 end
