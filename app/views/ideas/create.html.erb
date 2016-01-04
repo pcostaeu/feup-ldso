@@ -11,11 +11,11 @@
       <div class="row">
         <div class="form-group" id="participantesForm">
           <div class="form-group col-lg-6">
-            <%= f.label :author, "Nome" %>
+            <%= f.label :author, "Nome completo" %>
             <%= f.text_field :author, :class => 'form-control',  :required => true, :'data-errormessage-value-missing' => 'Nome obrigatório'  %>
           </div>
           <div class="form-group col-lg-6">
-            <%= f.label :email, "Email" %>
+            <%= f.label :email, "Email institutional" %>
             <%= f.text_field :email, :class => 'form-control' , :required => true, :'data-errormessage-value-missing' => 'Email institucional obrigatório', :pattern => '([A-Za-z0-9]*)@fe.up.pt' %>
           </div>
         </div>
