@@ -1,7 +1,7 @@
 var values;
 var i = 2;
 $(document).ready(function() {
-  $('#participanteRem').fadeOut();
+  $('#participanteRem').hide();
 
   //Adds a new participant to submit idea form
   $('#participante').click(function() {
