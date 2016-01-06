@@ -6,6 +6,8 @@
 
 Consulte a wiki para mais informações.
 
+Link (acessível apenas dentro da rede da FEUP) - [Mais IS](http://192.168.58.83/)
+
 ###Members
 - Diogo Soares
 - Joana Beleza
