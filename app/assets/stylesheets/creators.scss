@@ -1,0 +1,69 @@
+// Place all the styles related to the creators controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.col-lg-5ths,
+.col-md-5ths,
+.col-sm-5ths,
+.col-xs-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.col-xs-5ths {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
+  #left {
+    text-align: center;
+  }
+  #right {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
+  #left {
+    text-align: center;
+  }
+  #right {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
+  }
+  #left {
+    text-align: right;
+  }
+  #right {
+    text-align: left;
+  }
+}
+.btn-linkedin {
+  color: #fff;
+  background-color: #007bb6;
+  border-color: rgba(0,0,0,0.2);
+  margin-left: 1px;
+}
+.join {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  #left {
+    text-align: center;
+  }
+  #right {
+    text-align: center;
+  }
+}

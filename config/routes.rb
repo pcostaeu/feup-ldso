@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   post 'update', to: 'admins#update', as: 'update'
 
+  get 'about', to: 'creators#index', as: 'creators'
+
   root 'welcome#index'
 
   get '/en' => 'welcome#index_en', as: 'english'
