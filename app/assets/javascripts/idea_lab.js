@@ -49,6 +49,8 @@ $(document).ready(function() {
     var myElement = document.querySelector("#ideas");
     myElement.style.paddingTop = "0px";
   });
+
+  changeAbout();
 });
 
 //Makes vertical scroll effect to ideas div
@@ -96,6 +98,15 @@ function showMore(id, text) {
   $('#showMoreButton' + id).fadeOut();
   $('#showMoreButton' + id).hide();
   $('#showLessButton' + id).fadeIn();
+}
+
+//Changes about text when page is in Enghish
+function changeAbout() {
+  var url = window.location.href;
+  if (url.substring(url.length - 2) == "en") {
+      $('#about').text('About this page');
+      $('#about').attr("href",'/about_en')
+  }
 }
 
 //Fucntion to show less button. Remeve div with specified ID.

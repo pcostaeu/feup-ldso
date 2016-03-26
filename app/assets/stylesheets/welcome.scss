@@ -1,7 +1,7 @@
 //---------------- CSS relative to all pages -----------------------------------
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: url(/assets/bg.jpg) no-repeat center center fixed;
+  background: url("/assets/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -18,13 +18,13 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
 }
-html,
-body {
+body,
+html {
   height: 100%;
 }
 .page {
   min-height: 100%;
-  margin-bottom: -2.1%;
+  margin-bottom: -1.9%;
 }
 .page:after {
   content: "";
@@ -64,8 +64,8 @@ hr {
   max-width: 400px;
   border-color: #999999;
 }
-.brand,
-.address-bar {
+.address-bar,
+.brand {
   display: none;
 }
 .navbar-brand {
@@ -187,10 +187,10 @@ footer p {
     background: #fff;
     background: rgba(255,255,255,0.9);
   }
-  .nav>li>a {
+  .nav > li > a {
     padding: 35px;
   }
-  .navbar-nav>li>a {
+  .navbar-nav > li > a {
     line-height: normal;
   }
   .navbar-nav {
@@ -207,6 +207,15 @@ footer p {
     display: table;
     clear: both;
   }
+  #about {
+    float: right;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width:1199px) {
+  footer .row {
+    text-align: center;
+  }
 }
 #log-out {
   position: absolute;
@@ -221,7 +230,6 @@ footer p {
   margin-left: auto;
   margin-right: auto;
 }
-
 // ----------------------- Crop Images from carousel ---------------------------
 .FlexEmbed {
   display: block;
@@ -252,7 +260,6 @@ footer p {
   margin: 0 auto;
   max-width: 100%;
 }
-
 //----------------------- Carousel Styling -------------------------------------
 .carousel-inner {
   border-radius: 15px;

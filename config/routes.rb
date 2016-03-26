@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post 'update', to: 'admins#update', as: 'update'
 
   get 'about', to: 'creators#index', as: 'creators'
+  get 'about_en', to: 'creators#index_en', as: 'creators_english'
 
   root 'welcome#index'
 
