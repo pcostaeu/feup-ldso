@@ -6,7 +6,7 @@
 
 Consulte a wiki para mais informações.
 
-Link: [Mais Ideias Sustentáveis](http://192.168.58.83/)
+Link: [Mais Ideias Sustentáveis](http://ideiassustentaveis.fe.up.pt)
 
 ###Members
 - Diogo Soares
