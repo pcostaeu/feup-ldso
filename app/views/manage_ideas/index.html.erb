@@ -1,108 +1,111 @@
 <%= render "layouts/admin_header" %>
 
 <div class="container" id="ideas">
-  <% @ideas.each do |idea| %>
-  <div class="row">
-    <div class="box">
-      <div class="col-lg-12 text-center">
-        <h2><%= idea.title %><br>
-          <small>Ideia submetida a
-            <%= idea.date.strftime("%d %B, %Y")  %></small>
-        </h2>
-        <% if idea.picture? %>
-        <div class="col-xs-12 col-sm-12 col-md-4">
-          <img class="img-responsive img-border img-full" src="<%=idea.picture.url%>">
+    <% @ideas.each do |idea| %>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12 text-center">
+                <h2><%= idea.title %><br>
+                    <small>Ideia submetida a
+                        <%= idea.date.strftime("%d %B, %Y")  %></small>
+                </h2>
+                <% if idea.picture? %>
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <img class="img-responsive img-border img-full" src="<%=idea.picture.url%>">
+                </div>
+                <% end %>
+                <h4>Resumo</h4>
+                <p><%= idea.resumo %></p>
+                <br>
+                <% if idea.text != "" %>
+                <div id='text<%=idea.id%>' style="display: none;">
+                    <h4>Descrição</h4>
+                    <p><%= idea.text %></p>
+                </div>
+                <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>)' type="button">
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </span>
+                    Mostrar Mais
+                </button>
+                <button class="btn btn-default btn-md" id='showLessButton<%= idea.id %>' onclick='showLess(<%= idea.id %>)' style="display: none;" type="button">
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-minus"></i>
+                    </span>
+                    Mostrar Menos
+                </button>
+                <% end %>
+            </div>
+            <div class="col-lg-12">
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Autor:
+                        <small>
+                            <%= idea.author %>
+                        </small>
+                    </h4>
+                </div>
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Email:
+                        <small>
+                            <%= idea.email %>
+                        </small>
+                    </h4>
+                </div>
+                <% if idea.author2? %>
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Autor:
+                        <small>
+                            <%= idea.author2%>
+                        </small>
+                    </h4>
+                </div>
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Email:
+                        <small>
+                            <%= idea.email2%>
+                        </small>
+                    </h4>
+                </div>
+                <% end %>
+                <% if idea.author3? %>
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Autor:
+                        <small>
+                            <%= idea.author3%>
+                        </small>
+                    </h4>
+                </div>
+                <div class="col-lg-6" style="padding:0px;">
+                    <h4>Email:
+                        <small>
+                            <%= idea.email3%>
+                        </small>
+                    </h4>
+                </div>
+                <% end %>
+            </div>
+            <div class="col-lg-12">
+                <% if idea.auts == "aut_full" %>
+                <h4>Autorização:
+                    <small>completa</small>
+                </h4>
+            <% else %>
+                <h4>Autorização:
+                    <small>parcial</small>
+                </h4>
+                <%end%>
+            </div>
+            <div class="btn-group btn-group-sm col-lg-12 text-center" id="idea<%= idea.id %>">
+                <div>
+                    <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
+                </div>
+                <%= form_for :idea, url: approve_manage_idea_path(idea), remote: true, method: :post do |f|  %>
+                <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle', :required =>true} %>
+                <%= f.submit 'Destacar vencedor', role:"button" ,class:"btn btn-success", data: { confirm: 'Tem a certeza?' } %>
+                <%end%>
+                <%= button_to 'Apagar', delete_manage_idea_path(idea), method: :post, remote: true, role:"button" , class:"btn btn-danger", data: { confirm: 'Tem a certeza?' } %>
+            </div>
         </div>
-        <% end %>
-        <h4>Resumo</h4>
-        <p><%= idea.resumo %></p>
-        <br>
-        <div id='text<%=idea.id%>'></div>
-        <% if idea.text != "" %>
-        <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>, "<%= idea.text.gsub(".", ". \\") %>")' type="button">
-          <span class="icon-stack">
-            <i class="glyphicon glyphicon-plus"></i>
-          </span>
-          Mostrar Mais
-        </button>
-        <button class="btn btn-default btn-md" id='showLessButton<%= idea.id %>' onclick='showLess(<%= idea.id %>)' style="display: none;" type="button">
-          <span class="icon-stack">
-            <i class="glyphicon glyphicon-minus"></i>
-          </span>
-          Mostrar Menos
-        </button>
-        <% end %>
-      </div>
-      <div class="col-lg-12">
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Autor:
-            <small>
-              <%= idea.author %>
-            </small>
-          </h4>
-        </div>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Email:
-            <small>
-              <%= idea.email %>
-            </small>
-          </h4>
-        </div>
-        <% if idea.author2? %>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Autor:
-            <small>
-              <%= idea.author2%>
-            </small>
-          </h4>
-        </div>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Email:
-            <small>
-              <%= idea.email2%>
-            </small>
-          </h4>
-        </div>
-        <% end %>
-        <% if idea.author3? %>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Autor:
-            <small>
-              <%= idea.author3%>
-            </small>
-          </h4>
-        </div>
-        <div class="col-lg-6" style="padding:0px;">
-          <h4>Email:
-            <small>
-              <%= idea.email3%>
-            </small>
-          </h4>
-        </div>
-        <% end %>
-      </div>
-      <div class="col-lg-12">
-        <% if idea.auts == "aut_full" %>
-        <h4>Autorização:
-          <small>completa</small>
-        </h4>
-        <% else %>
-        <h4>Autorização:
-          <small>parcial</small>
-        </h4>
-        <%end%>
-      </div>
-      <div class="btn-group btn-group-sm col-lg-12 text-center" id="idea<%= idea.id %>">
-        <div>
-          <%= button_to 'Nova categoria', new_topic_path, role:"button", class:"btn-xs btn-link" %>
-        </div>
-        <%= form_for :idea, url: approve_manage_idea_path(idea), remote: true, method: :post do |f|  %>
-        <%= f.collection_select :topic_id, Topic.order(:name),:id, :name, {include_blank: 'Categoria'}, {:class => 'btn btn-default dropdown-toggle', :required =>true} %>
-        <%= f.submit 'Destacar vencedor', role:"button" ,class:"btn btn-success", data: { confirm: 'Tem a certeza?' } %>
-        <%end%>
-        <%= button_to 'Apagar', delete_manage_idea_path(idea), method: :post, remote: true, role:"button" , class:"btn btn-danger", data: { confirm: 'Tem a certeza?' } %>
-      </div>
     </div>
-  </div>
-  <%end%>
+    <%end%>
 </div>

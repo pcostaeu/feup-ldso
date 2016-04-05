@@ -2,46 +2,49 @@
 
 <div class="container" id="ideas">
 
-  <% if @ideas.size != 0 %>
-  <div class="row">
-    <div class="box">
-      <% @ideas.each do |idea| %>
-      <div class="col-lg-12 text-center" id='idea<%=idea.id %>'>
-        <h2>[<%= idea.topic.name %>]
-          <%= idea.title %><br>
-          <small><%= idea.date.strftime("%B %d, %Y")  %></small>
-        </h2>
-        <div class="col-xs-12 col-sm-12 col-md-4">
-          <% if idea.picture? %>
-          <img class="img-responsive img-border img-full" src='<%=idea.picture.url%>'>
-          <% else %>
-          <img class="img-responsive img-border img-full" src='<%=idea.topic.picture.url%>'>
-          <% end %>
+    <% if @ideas.size != 0 %>
+    <div class="row">
+        <div class="box">
+            <% @ideas.each do |idea| %>
+            <div class="col-lg-12 text-center" id='idea<%=idea.id %>'>
+                <h2>[<%= idea.topic.name %>]
+                    <%= idea.title %><br>
+                    <small><%= idea.date.strftime("%B %d, %Y")  %></small>
+                </h2>
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <% if idea.picture? %>
+                    <img class="img-responsive img-border img-full" src='<%=idea.picture.url%>'>
+                <% else %>
+                    <img class="img-responsive img-border img-full" src='<%=idea.topic.picture.url%>'>
+                    <% end %>
+                </div>
+                <h4>Resume</h4>
+                <p><%= idea.resumo %></p>
+                <br>
+                <% if idea.auts == 'aut_full' && idea.text != "" %>
+                <div id='text<%=idea.id%>' style="display: none;">
+                    <h4>Description</h4>
+                    <p><%= idea.text %></p>
+                </div>
+                <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>)' type="button">
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </span>
+                    Show more
+                </button>
+                <button class="btn btn-default btn-md" id='showLessButton<%= idea.id %>' onclick='showLess(<%= idea.id %>)' style="display: none;" type="button">
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-minus"></i>
+                    </span>
+                    Show less
+                </button>
+                <% end %>
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+            </div>
+            <% end %>
         </div>
-        <h4>Resume</h4>
-        <p><%= idea.resumo %></p>
-        <br>
-        <div id='text<%=idea.id%>'></div>
-        <% if idea.auts == 'aut_full' && idea.text != "" %>
-        <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>, "<%= idea.text.gsub(".", ". \\") %>")' type="button">
-          <span class="icon-stack">
-            <i class="glyphicon glyphicon-plus"></i>
-          </span>
-          Show More
-        </button>
-        <button class="btn btn-default btn-md" id='showLessButton<%= idea.id %>' onclick='showLess(<%= idea.id %>)' style="display: none;" type="button">
-          <span class="icon-stack">
-            <i class="glyphicon glyphicon-minus"></i>
-          </span>
-          Show Less
-        </button>
-        <% end %>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-      </div>
-      <% end %>
     </div>
-  </div>
-  <% end %>
+    <% end %>
 </div>

@@ -18,7 +18,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <%= link_to ideas_path(:controller => "index", :anchor => "idea" + @first_idea.id.to_s) do %>
+              <%= link_to ideas_english_path(:controller => "index_en", :anchor => "idea" + @first_idea.id.to_s) do %>
               <% if @first_idea.picture? %>
               <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= @first_idea.picture.url%>)">
                 <% else %>
@@ -32,7 +32,7 @@
               </div>
               <% @ideas.each do |idea| %>
               <div class="item">
-                <%= link_to ideas_path(:controller => "index", :anchor => "idea" + idea.id.to_s) do %>
+                <%= link_to ideas_english_path(:controller => "index_en", :anchor => "idea" + idea.id.to_s) do %>
                 <% if idea.picture? %>
                 <div class="CoverImage FlexEmbed FlexEmbed--2by1" style="background-image:url(<%= idea.picture.url%>)">
                   <% else %>

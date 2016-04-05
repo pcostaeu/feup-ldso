@@ -89,12 +89,8 @@ function hide_remove_top_idea(id) {
 }
 
 //Fucntion to show more button. Adds to a div the text received on funcion
-function showMore(id, text) {
-  var url = window.location.href;
-  if (url.substring(url.length - 2) != "en")
-    $('#text' + id).append("<h4>Descrição</h4><p>" + text + "</p>");
-  else
-    $('#text' + id).append("<h4>Description</h4><p>" + text + "</p>");
+function showMore(id) {
+  $('#text' + id).fadeIn();
   $('#showMoreButton' + id).fadeOut();
   $('#showMoreButton' + id).hide();
   $('#showLessButton' + id).fadeIn();
@@ -111,7 +107,8 @@ function changeAbout() {
 
 //Fucntion to show less button. Remeve div with specified ID.
 function showLess(id) {
-  $('#text' + id).empty();
+  $('#text' + id).fadeOut();
+  $('#text' + id).hide();
   $('#showMoreButton' + id).fadeIn();
   $('#showLessButton' + id).fadeOut();
   $('#showLessButton' + id).hide();
