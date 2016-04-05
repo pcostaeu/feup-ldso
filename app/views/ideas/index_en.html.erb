@@ -23,7 +23,7 @@
         <br>
         <div id='text<%=idea.id%>'></div>
         <% if idea.auts == 'aut_full' && idea.text != "" %>
-        <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>, "<%= idea.text %>")' type="button">
+        <button class="btn btn-default btn-md" id='showMoreButton<%= idea.id %>' onclick='showMore(<%= idea.id %>, "<%= idea.text.gsub(".", ". \\") %>")' type="button">
           <span class="icon-stack">
             <i class="glyphicon glyphicon-plus"></i>
           </span>
