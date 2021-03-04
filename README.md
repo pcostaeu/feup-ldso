@@ -1,17 +1,5 @@
-# LDSO-5D
+## More Sustainable Ideas
 
-###FEUP - Software Development Lab
+Web platform that allows the FEUP community to submit proposals on how to contribute to a more sustainable society, with the ultimate goal being to raise awareness of these types of issues.
 
-‘Mais Ideais Sustentáveis’ é uma plataforma web que permite à comunidade FEUP submeter propostas de como contribuir para uma sociedade mais sustentável, sendo o objetivo final sensibilizar as pessoas para este tipo de questões.
-
-Consulte a wiki para mais informações.
-
-Link: [Mais Ideias Sustentáveis](http://ideiassustentaveis.fe.up.pt)
-
-###Members
-- Diogo Soares
-- Joana Beleza
-- João Morgado
-- Luís Pinto
-- Paulo Costa
-
+[More Sustainable Ideas](http://ideiassustentaveis.fe.up.pt)
